@@ -1,0 +1,3393 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="tool">
+  <meta name="design-style" content="briefing">
+  <title>英華書院 中一級 公經社科 單元1.2 概念詞互動溫習與背默系統</title>
+  
+  <!-- Approved Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  
+  <!-- Approved Lucide Icons -->
+  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Page and surfaces: warm stone-white paper */
+      --background: #faf9f5;
+      --surface-container-low: #ffffff;
+      --surface-container: #f1efe8;
+      --surface-container-high: #e6e2d6;
+      --surface-container-highest: #dcd8cb;
+
+      /* Ink */
+      --on-surface: #17181a;
+      --on-surface-variant: #56585c;
+      --on-surface-muted: #797c82;
+
+      /* Rules */
+      --outline: #17181a;
+      --outline-variant: #dedad0;
+
+      /* Accents */
+      --primary: #17181a;
+      --on-primary: #faf9f5;
+      --primary-container: #f2b705;
+      --on-primary-container: #17181a;
+      --secondary: #1f4e5f;
+      --on-secondary: #ffffff;
+      --secondary-container: #e0edf1;
+      --on-secondary-container: #12333f;
+      --tertiary: #785008;
+      --tertiary-container: #faeccf;
+      --on-tertiary-container: #493002;
+      --error: #b42318;
+      --on-error: #ffffff;
+      --error-container: #fde8e8;
+      --on-error-container: #61100b;
+
+      /* Semantic */
+      --positive: #2b6e52;
+      --on-positive: #ffffff;
+      --positive-container: #e2f2eb;
+      --on-positive-container: #143d2c;
+      --warning: #d99000;
+      --focus: #1f4e5f;
+
+      /* Data series */
+      --data-1: #1f4e5f;
+      --data-2: #d99000;
+      --data-3: #2b6e52;
+      --data-4: #b84a39;
+      --data-context: #c4bfb2;
+
+      /* Calligraphy grid & canvas specific */
+      --calligraphy-grid: #f5c2c7;
+      --calligraphy-border: #dc3545;
+      --brush-ink: #17181a;
+      --brush-vermilion: #b42318;
+      --brush-ghost: #dedad0;
+
+      /* Day tags */
+      --day1-color: #1f4e5f;
+      --day1-bg: #e5eff2;
+      --day2-color: #785008;
+      --day2-bg: #faeccf;
+      --day3-color: #2b6e52;
+      --day3-bg: #e2f2eb;
+      --day4-color: #6b3353;
+      --day4-bg: #f5e4ee;
+
+      /* Fonts */
+      --font-headline: 'Noto Serif TC', 'Source Serif 4', Georgia, serif;
+      --font-body: 'Noto Sans TC', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-label: 'Geist Mono', 'Noto Sans TC', monospace;
+
+      /* Shape */
+      --rounded: 0.25rem;
+      --rounded-md: 0.375rem;
+      --rounded-lg: 0.5rem;
+      --rounded-full: 9999px;
+
+      /* Style effects */
+      --section-rule: 1.5px solid var(--outline);
+      --card-border: 1px solid var(--outline-variant);
+      --badge-radius: 2px;
+      --heading-tracking: -0.01em;
+      --label-tracking: 0.05em;
+
+      /* Type scale for tool */
+      --display-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+      --headline-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+      --subhead-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+      --body-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+      --label-size: 0.75rem;
+
+      /* Spacing scale */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+
+      /* Motion */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+    }
+
+    /* Base Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      overflow-x: clip;
+      background-color: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { position: static !important; }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Layout Containers */
+    .app-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-md) var(--space-lg) var(--space-3xl);
+    }
+
+    @media (max-width: 640px) {
+      .app-container {
+        padding: var(--space-sm) var(--space-sm) var(--space-2xl);
+      }
+    }
+
+    /* Dossier Bar & Header */
+    .dossier-bar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      border-bottom: var(--section-rule);
+      padding-bottom: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    .dossier-pill {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.6875rem;
+      letter-spacing: var(--label-tracking);
+      text-transform: uppercase;
+      padding: 0.1875rem 0.5rem;
+      border-radius: var(--badge-radius);
+    }
+    .dossier-meta {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--on-surface-variant);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .main-title {
+      font-family: var(--font-headline);
+      font-size: var(--display-size);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: var(--heading-tracking);
+      color: var(--on-surface);
+      margin-bottom: var(--space-xs);
+    }
+    .standfirst {
+      font-size: var(--subhead-size);
+      font-weight: 500;
+      color: var(--secondary);
+      max-width: 85ch;
+      margin-bottom: var(--space-lg);
+    }
+
+    /* Dashboard Action Deck */
+    .dashboard-deck {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .stat-card {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .stat-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--on-surface-variant);
+      text-transform: uppercase;
+      margin-bottom: var(--space-xs);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    .stat-value {
+      font-family: var(--font-headline);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--on-surface);
+      line-height: 1.1;
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-xs);
+    }
+    .stat-sub {
+      font-size: var(--label-size);
+      color: var(--on-surface-variant);
+      margin-top: var(--space-xs);
+    }
+    .progress-bar-bg {
+      height: 6px;
+      background: var(--surface-container-high);
+      border-radius: var(--rounded-full);
+      overflow: hidden;
+      margin-top: var(--space-sm);
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--secondary);
+      transition: width var(--dur-short) var(--ease-out);
+    }
+
+    /* Settings & Controls Row */
+    .controls-panel {
+      background: var(--surface-container);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    .control-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+    .slider-control {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--label-size);
+      font-family: var(--font-label);
+      color: var(--on-surface-variant);
+    }
+    .slider-control label {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      font-weight: 600;
+      color: var(--on-surface);
+    }
+    .slider-input {
+      accent-color: var(--secondary);
+      cursor: pointer;
+      width: 100px;
+    }
+    .slider-val-badge {
+      font-family: var(--font-label);
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      padding: 0.125rem 0.375rem;
+      border-radius: var(--badge-radius);
+      min-width: 38px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    /* Main Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      border-bottom: var(--section-rule);
+      gap: var(--space-xs);
+      overflow-x: auto;
+      margin-bottom: var(--space-lg);
+      scrollbar-width: thin;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: var(--space-sm) var(--space-md);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: var(--body-size);
+      color: var(--on-surface-variant);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      white-space: nowrap;
+      transition: color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+    }
+    .tab-btn:hover {
+      color: var(--on-surface);
+    }
+    .tab-btn.active {
+      color: var(--on-surface);
+      border-bottom-color: var(--outline);
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-md) var(--rounded-md) 0 0;
+    }
+
+    /* Sub-filters and Schedule Filter Bar */
+    .filter-section {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-md);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .filter-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    .filter-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      color: var(--on-surface-variant);
+      min-width: 85px;
+      font-weight: 600;
+    }
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .filter-pill {
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      color: var(--on-surface);
+      padding: 0.25rem 0.625rem;
+      border-radius: var(--rounded-md);
+      font-size: var(--label-size);
+      font-weight: 500;
+      cursor: pointer;
+      transition: background var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+    .filter-pill:hover {
+      background: var(--surface-container-high);
+    }
+    .filter-pill.active {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+      font-weight: 600;
+    }
+    .pill-count {
+      font-family: var(--font-label);
+      font-size: 0.6875rem;
+      opacity: 0.85;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      flex: 1;
+      min-width: min(280px, 100%);
+    }
+    .search-input {
+      width: 100%;
+      padding: var(--space-sm) var(--space-md) var(--space-sm) 2.25rem;
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      background: var(--background);
+      font-size: var(--body-size);
+      color: var(--on-surface);
+    }
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--on-surface-variant);
+      pointer-events: none;
+    }
+
+    /* Cards Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+
+    .card-wrapper {
+      container-type: inline-size;
+    }
+
+    .concept-card {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow var(--dur-short) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+      position: relative;
+    }
+    .concept-card:hover {
+      border-color: var(--secondary);
+    }
+    .concept-card.mastered {
+      border-left: 4px solid var(--positive);
+    }
+    .concept-card.needs-review {
+      border-left: 4px solid var(--data-2);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+    .card-meta-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .index-badge {
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: var(--label-size);
+      color: var(--secondary);
+      background: var(--surface-container);
+      padding: 0.125rem 0.375rem;
+      border-radius: var(--badge-radius);
+    }
+    .day-badge {
+      font-family: var(--font-label);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 0.125rem 0.375rem;
+      border-radius: var(--badge-radius);
+    }
+    .day-badge.day-1 { background: var(--day1-bg); color: var(--day1-color); }
+    .day-badge.day-2 { background: var(--day2-bg); color: var(--day2-color); }
+    .day-badge.day-3 { background: var(--day3-bg); color: var(--day3-color); }
+    .day-badge.day-4 { background: var(--day4-bg); color: var(--day4-color); }
+
+    .category-chip {
+      font-size: 0.6875rem;
+      color: var(--on-surface-variant);
+      background: var(--surface-container);
+      padding: 0.125rem 0.375rem;
+      border-radius: var(--badge-radius);
+    }
+
+    .bookmark-btn {
+      background: transparent;
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--on-surface-variant);
+      transition: background var(--dur-micro) var(--ease-out);
+    }
+    .bookmark-btn:hover {
+      background: var(--surface-container);
+      color: var(--on-surface);
+    }
+    .bookmark-btn.active {
+      background: var(--positive-container);
+      color: var(--positive);
+      border-color: var(--positive);
+      font-weight: 600;
+    }
+
+    /* Term Display and Characters Breakdown */
+    .term-headline-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      margin: var(--space-xs) 0 var(--space-sm);
+    }
+    .term-title {
+      font-family: var(--font-headline);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--on-surface);
+      line-height: 1.25;
+      letter-spacing: var(--heading-tracking);
+    }
+    .term-char-interactive {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0.05rem 0.15rem;
+      border-radius: var(--rounded);
+      transition: background var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+    .term-char-interactive:hover {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      text-decoration: underline;
+    }
+
+    .tts-inline-btn {
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      color: var(--secondary);
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+      transition: all var(--dur-micro) var(--ease-out);
+      white-space: nowrap;
+    }
+    .tts-inline-btn:hover {
+      background: var(--secondary);
+      color: var(--on-secondary);
+      border-color: var(--secondary);
+    }
+    .tts-inline-btn.playing {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      border-color: var(--outline);
+    }
+
+    /* Definition Section */
+    .definition-box {
+      background: var(--surface-container);
+      border-radius: var(--rounded);
+      padding: var(--space-sm) var(--space-md);
+      margin: var(--space-sm) 0;
+      position: relative;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: var(--on-surface);
+    }
+    .definition-box.hidden-content {
+      filter: blur(5px);
+      user-select: none;
+      cursor: pointer;
+    }
+    .reveal-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-container-high);
+      border-radius: var(--rounded);
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--secondary);
+      font-size: var(--label-size);
+    }
+
+    .def-tts-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: var(--space-xs);
+    }
+
+    /* Character Stroke Chips Bar */
+    .char-chips-bar {
+      margin-top: var(--space-sm);
+      padding-top: var(--space-xs);
+      border-top: 1px dashed var(--outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .char-chips-label {
+      font-size: 0.6875rem;
+      font-family: var(--font-label);
+      color: var(--on-surface-variant);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .char-chips-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .char-chip {
+      background: var(--surface-container-high);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--badge-radius);
+      padding: 0.125rem 0.375rem;
+      font-family: var(--font-headline);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--on-surface);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.125rem;
+      transition: background var(--dur-micro) var(--ease-out);
+    }
+    .char-chip:hover {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      border-color: var(--outline);
+    }
+
+    /* Flashcard / Recall Mode Specific */
+    .mode-recall-toolbar {
+      background: var(--surface-container);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-md);
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+    .recall-modes-group {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      flex-wrap: wrap;
+    }
+    .btn-action {
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: 0.375rem 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--on-surface);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      transition: background var(--dur-micro) var(--ease-out);
+    }
+    .btn-action:hover {
+      background: var(--surface-container-high);
+    }
+    .btn-action.active {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+
+    /* 5-Minute Mock Exam Mode */
+    .exam-container {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-lg);
+    }
+    .exam-header {
+      border-bottom: var(--section-rule);
+      padding-bottom: var(--space-md);
+      margin-bottom: var(--space-lg);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-md);
+    }
+    .exam-title-block h3 {
+      font-family: var(--font-headline);
+      font-size: var(--headline-size);
+      font-weight: 700;
+      color: var(--on-surface);
+      margin-bottom: var(--space-xs);
+    }
+    .exam-instructions {
+      font-size: var(--body-size);
+      color: var(--on-surface-variant);
+      max-width: 65ch;
+    }
+    .exam-rules-list {
+      margin-top: var(--space-xs);
+      padding-left: var(--space-md);
+      font-size: 0.875rem;
+      color: var(--tertiary);
+    }
+    .exam-timer-card {
+      background: var(--surface-container);
+      border: 1.5px solid var(--outline);
+      border-radius: var(--rounded-md);
+      padding: var(--space-sm) var(--space-md);
+      text-align: center;
+      min-width: 160px;
+    }
+    .timer-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      color: var(--on-surface-variant);
+    }
+    .timer-digits {
+      font-family: var(--font-label);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--error);
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+      margin: 0.25rem 0;
+    }
+
+    .exam-q-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+    .exam-q-item {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+    }
+    .exam-q-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-sm);
+    }
+    .exam-q-index {
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--secondary);
+    }
+    .exam-q-def {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--on-surface);
+      margin-bottom: var(--space-md);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--surface-container-low);
+      border-left: 3px solid var(--secondary);
+      border-radius: 0 var(--rounded) var(--rounded) 0;
+    }
+    .exam-input-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+    .exam-input-row label {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--on-surface);
+    }
+    .exam-text-input {
+      flex: 1;
+      min-width: 220px;
+      padding: var(--space-sm) var(--space-md);
+      border: 1.5px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      background: var(--surface-container-low);
+      font-size: var(--body-size);
+      color: var(--on-surface);
+      font-weight: 600;
+    }
+    .exam-text-input:focus {
+      border-color: var(--focus);
+    }
+
+    .exam-actions-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: var(--section-rule);
+      padding-top: var(--space-md);
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+    .btn-submit-exam {
+      background: var(--primary);
+      color: var(--on-primary);
+      border: none;
+      border-radius: var(--rounded);
+      padding: var(--space-sm) var(--space-lg);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    .btn-submit-exam:hover {
+      background: var(--secondary);
+    }
+
+    /* Exam Result Modal/Report */
+    .exam-result-banner {
+      background: var(--surface-container);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-lg);
+      text-align: center;
+    }
+    .score-headline {
+      font-family: var(--font-headline);
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+      margin: var(--space-xs) 0;
+    }
+    .score-grade {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    /* Stroke Studio (漢字筆順研習模組) */
+    .stroke-studio-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-lg);
+    }
+    @media (max-width: 860px) {
+      .stroke-studio-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mizige-panel {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .char-info-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--outline-variant);
+      padding-bottom: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    .char-jyutping {
+      font-family: var(--font-label);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+    .char-meta-tags {
+      display: flex;
+      gap: var(--space-xs);
+    }
+    .char-tag {
+      font-size: var(--label-size);
+      background: var(--surface-container);
+      padding: 0.125rem 0.375rem;
+      border-radius: var(--badge-radius);
+      color: var(--on-surface-variant);
+    }
+
+    /* Authentic Red-Line Mi-Zi-Ge Grid */
+    .mizige-canvas-wrapper {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      margin: var(--space-md) auto;
+      border: 2px solid var(--calligraphy-border);
+      background: var(--surface-container-low);
+      box-shadow: 0 4px 12px 0 rgba(23, 24, 26, 0.05);
+    }
+    .mizige-grid-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .mizige-char-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .mizige-draw-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: crosshair;
+      touch-action: none;
+    }
+
+    /* Animation Player Controls */
+    .player-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      margin: var(--space-sm) 0;
+      flex-wrap: wrap;
+    }
+    .btn-player {
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: 0.375rem 0.625rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      color: var(--on-surface);
+      transition: background var(--dur-micro) var(--ease-out);
+    }
+    .btn-player:hover {
+      background: var(--surface-container-high);
+    }
+    .btn-player.active {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .stroke-step-counter {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 600;
+      color: var(--secondary);
+      margin: var(--space-xs) 0;
+      text-align: center;
+    }
+
+    /* Stroke Breakdown Steps Gallery */
+    .stroke-breakdown-gallery {
+      width: 100%;
+      margin-top: var(--space-md);
+      border-top: 1px solid var(--outline-variant);
+      padding-top: var(--space-sm);
+    }
+    .breakdown-title {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      color: var(--on-surface-variant);
+      margin-bottom: var(--space-xs);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .breakdown-chips-row {
+      display: flex;
+      gap: 0.375rem;
+      overflow-x: auto;
+      padding-bottom: var(--space-xs);
+    }
+    .breakdown-step-card {
+      min-width: 58px;
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--badge-radius);
+      padding: 0.25rem;
+      text-align: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .breakdown-step-card:hover {
+      border-color: var(--outline);
+    }
+    .breakdown-step-card.active {
+      border-color: var(--secondary);
+      background: var(--secondary-container);
+      color: var(--on-secondary-container);
+      font-weight: 600;
+    }
+    .breakdown-char-mini {
+      font-family: var(--font-headline);
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+    .breakdown-stroke-name {
+      font-size: 0.6875rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* Practice Pad Panel */
+    .practice-pad-panel {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .practice-tools-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    .tool-group {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    .color-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: var(--rounded-full);
+      border: 2px solid var(--outline-variant);
+      cursor: pointer;
+    }
+    .color-btn.active {
+      border-color: var(--outline);
+      box-shadow: 0 0 0 2px var(--background), 0 0 0 3px var(--outline);
+    }
+    .color-btn.black { background: var(--brush-ink); }
+    .color-btn.red { background: var(--brush-vermilion); }
+
+    .character-picker-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      overflow-x: auto;
+      padding: var(--space-sm) 0;
+      margin-bottom: var(--space-md);
+      border-bottom: 1px solid var(--outline-variant);
+    }
+    .picker-char-btn {
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      padding: 0.25rem 0.5rem;
+      font-family: var(--font-headline);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--on-surface);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .picker-char-btn:hover {
+      background: var(--surface-container-high);
+    }
+    .picker-char-btn.active {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+
+    /* Modal Sheet for Stroke Quick View */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(23, 24, 26, 0.6);
+      backdrop-filter: blur(2px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-md);
+      z-index: 1000;
+    }
+    .modal-backdrop.open {
+      display: flex;
+    }
+    .modal-sheet {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-md);
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: var(--space-lg);
+      position: relative;
+      box-shadow: 0 10px 30px 0 rgba(0,0,0,0.2);
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      background: var(--surface-container);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--on-surface);
+    }
+
+    /* Toast Notification */
+    .toast-box {
+      position: fixed;
+      bottom: var(--space-lg);
+      right: var(--space-lg);
+      background: var(--primary);
+      color: var(--on-primary);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      font-size: 0.875rem;
+      font-weight: 600;
+      box-shadow: 0 4px 14px 0 rgba(0,0,0,0.15);
+      z-index: 2000;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    .toast-box.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Methodology / Source Note Box */
+    .aside-box {
+      background: var(--surface-container);
+      border-top: var(--section-rule);
+      padding: var(--space-md);
+      margin-top: var(--space-2xl);
+      border-radius: 0 0 var(--rounded-md) var(--rounded-md);
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+    }
+    .aside-box h4 {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      color: var(--on-surface);
+      margin-bottom: var(--space-xs);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Briefing Style Header & Dossier Bar -->
+    <header>
+      <div class="dossier-bar">
+        <span class="dossier-pill">溫習專題 · DOSSIER</span>
+        <span class="dossier-meta">英華書院 · 中一級 公民、經濟與社會科 · 單元1.2</span>
+        <span class="dossier-meta">37 概念詞全錄 · 四天溫習進度 · 粵語朗讀 · 繁體字筆順 · 5分鐘背默模擬試</span>
+      </div>
+
+      <h1 class="main-title">單元1.2：人際關係與社會共融 · 概念詞互動溫習網</h1>
+      <p class="standfirst">
+        專為中一同學打造的背默與自測神器。收錄詞表中全部 37 個核心概念詞與詳細解釋，配備廣東話標準發音、香港楷書筆順動態播放與練習板，並內置校內官方 5 分鐘背默模擬試題。
+      </p>
+    </header>
+
+    <!-- Top Statistical Deck & Overview -->
+    <section class="dashboard-deck">
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">
+            <i data-lucide="book-open" style="width:14px;height:14px;"></i>
+            概念詞總量
+          </div>
+          <div class="stat-value">37 <span style="font-size:1rem;font-weight:500;">詞</span></div>
+          <div class="stat-sub">涵蓋個人、家庭、人際、社會四大主題</div>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 100%;"></div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">
+            <i data-lucide="check-circle-2" style="width:14px;height:14px;"></i>
+            學習掌握進度
+          </div>
+          <div class="stat-value" id="stat-mastered-count">0 <span style="font-size:1rem;font-weight:500;">/ 37</span></div>
+          <div class="stat-sub" id="stat-mastered-pct">掌握率：0% · 點擊卡片星號標記已精通</div>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="stat-progress-bar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">
+            <i data-lucide="calendar" style="width:14px;height:14px;"></i>
+            四天溫習計劃
+          </div>
+          <div class="stat-value">4 <span style="font-size:1rem;font-weight:500;">天分段</span></div>
+          <div class="stat-sub">每天 9–10 詞，循序漸進攻克背默難點</div>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 25%; background: var(--data-2);"></div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="stat-label">
+            <i data-lucide="timer" style="width:14px;height:14px;"></i>
+            校內背默模擬
+          </div>
+          <div class="stat-value">5 <span style="font-size:1rem;font-weight:500;">分鐘</span></div>
+          <div class="stat-sub">全卷 10 題 · 嚴格防錯別字即時批改</div>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" style="width: 100%; background: var(--error);"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Voice & Settings Bar -->
+    <div class="controls-panel">
+      <div class="control-group">
+        <div class="slider-control">
+          <label for="speech-rate-slider">
+            <i data-lucide="volume-2" style="width:16px;height:16px;color:var(--secondary);"></i>
+            廣東話發音語速：
+          </label>
+          <input type="range" id="speech-rate-slider" class="slider-input" min="0.5" max="1.5" step="0.1" value="1.0" oninput="updateSpeechRate(this.value)">
+          <span class="slider-val-badge" id="speech-rate-label">1.0x</span>
+        </div>
+
+        <button type="button" class="btn-action" onclick="testCantoneseVoice()">
+          <i data-lucide="play" style="width:14px;height:14px;"></i>
+          試聽粵語 (zh-HK)
+        </button>
+      </div>
+
+      <div class="control-group">
+        <div class="slider-control">
+          <label for="stroke-speed-slider">
+            <i data-lucide="pen-tool" style="width:16px;height:16px;color:var(--tertiary);"></i>
+            筆順播放速度：
+          </label>
+          <input type="range" id="stroke-speed-slider" class="slider-input" min="0.5" max="2.0" step="0.25" value="1.0" oninput="updateStrokeSpeed(this.value)">
+          <span class="slider-val-badge" id="stroke-speed-label">1.0x</span>
+        </div>
+
+        <button type="button" class="btn-action" onclick="stopAllSpeech()">
+          <i data-lucide="square" style="width:14px;height:14px;"></i>
+          停止朗讀
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" role="tablist">
+      <button type="button" class="tab-btn active" id="tab-btn-explorer" onclick="switchMainTab('explorer')">
+        <i data-lucide="layout-grid" style="width:16px;height:16px;"></i>
+        概念詞庫瀏覽 (37)
+      </button>
+      <button type="button" class="tab-btn" id="tab-btn-recall" onclick="switchMainTab('recall')">
+        <i data-lucide="eye-off" style="width:16px;height:16px;"></i>
+        背默自測 · 翻牌遮蔽
+      </button>
+      <button type="button" class="tab-btn" id="tab-btn-exam" onclick="switchMainTab('exam')">
+        <i data-lucide="award" style="width:16px;height:16px;"></i>
+        5分鐘背默模擬試
+      </button>
+      <button type="button" class="tab-btn" id="tab-btn-stroke" onclick="switchMainTab('stroke')">
+        <i data-lucide="edit-3" style="width:16px;height:16px;"></i>
+        漢字筆順習字室
+      </button>
+    </nav>
+
+    <!-- TAB 1 & 2: Explorer & Recall Cards Container -->
+    <div id="view-cards-container">
+      
+      <!-- Filter Controls Section -->
+      <section class="filter-section">
+        
+        <!-- Day Schedule Filter Row -->
+        <div class="filter-row">
+          <span class="filter-label">四天進度：</span>
+          <div class="filter-pills" id="day-filter-group">
+            <button type="button" class="filter-pill active" onclick="setDayFilter('all', this)">
+              全部進度 <span class="pill-count">(37)</span>
+            </button>
+            <button type="button" class="filter-pill" onclick="setDayFilter(1, this)">
+              第 1 天 · 家庭結構 (9)
+            </button>
+            <button type="button" class="filter-pill" onclick="setDayFilter(2, this)">
+              第 2 天 · 管教衝突 (9)
+            </button>
+            <button type="button" class="filter-pill" onclick="setDayFilter(3, this)">
+              第 3 天 · 溝通朋輩 (9)
+            </button>
+            <button type="button" class="filter-pill" onclick="setDayFilter(4, this)">
+              第 4 天 · 多元共融 (10)
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Filter Row -->
+        <div class="filter-row">
+          <span class="filter-label">主題類別：</span>
+          <div class="filter-pills" id="category-filter-group">
+            <button type="button" class="filter-pill active" onclick="setCategoryFilter('all', this)">
+              全部類別
+            </button>
+            <button type="button" class="filter-pill" onclick="setCategoryFilter('family', this)">
+              家庭結構與代際關係 (9)
+            </button>
+            <button type="button" class="filter-pill" onclick="setCategoryFilter('parenting', this)">
+              父母管教與衝突模式 (9)
+            </button>
+            <button type="button" class="filter-pill" onclick="setCategoryFilter('communication', this)">
+              人際溝通與朋輩相處 (9)
+            </button>
+            <button type="button" class="filter-pill" onclick="setCategoryFilter('inclusion', this)">
+              多元社會與弱勢共融 (10)
+            </button>
+          </div>
+        </div>
+
+        <!-- Search & Mastery State Row -->
+        <div class="filter-row">
+          <span class="filter-label">快速搜索：</span>
+          <div class="search-input-wrapper">
+            <i data-lucide="search" class="search-icon" style="width:16px;height:16px;"></i>
+            <input type="text" id="concept-search-input" class="search-input" placeholder="輸入概念詞或解釋關鍵字（如：雙份收入、血緣、朋輩...）" oninput="handleSearchInput(this.value)">
+          </div>
+
+          <div class="filter-pills" style="margin-left:auto;">
+            <button type="button" class="filter-pill" id="filter-mastered-only-btn" onclick="toggleFilterMasteredOnly(this)">
+              <i data-lucide="star" style="width:12px;height:12px;"></i>
+              只看未掌握
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recall Mode Auxiliary Toolbar (Visible only in Recall Mode) -->
+      <div id="recall-mode-tools" class="mode-recall-toolbar" style="display:none;">
+        <div class="recall-modes-group">
+          <span style="font-weight:600;font-size:0.875rem;">背默遮蔽模式：</span>
+          <button type="button" class="btn-action active" id="btn-mask-def" onclick="setMaskMode('def')">
+            <i data-lucide="eye-off" style="width:14px;height:14px;"></i>
+            隱藏解釋（看詞背釋義）
+          </button>
+          <button type="button" class="btn-action" id="btn-mask-term" onclick="setMaskMode('term')">
+            <i data-lucide="help-circle" style="width:14px;height:14px;"></i>
+            隱藏概念詞（看釋義猜詞）
+          </button>
+          <button type="button" class="btn-action" id="btn-mask-none" onclick="setMaskMode('none')">
+            <i data-lucide="eye" style="width:14px;height:14px;"></i>
+            全部展開
+          </button>
+        </div>
+        <div style="font-size:0.75rem;color:var(--on-surface-variant);">
+          提示：點擊任何被遮蔽的卡片區域，即可單獨翻開答案驗證！
+        </div>
+      </div>
+
+      <!-- Cards Grid Render Target -->
+      <div class="card-grid" id="concepts-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+
+    <!-- TAB 3: 5-Minute Mock Exam View -->
+    <div id="view-exam-container" style="display:none;">
+      <section class="exam-container">
+        
+        <div class="exam-header">
+          <div class="exam-title-block">
+            <div class="dossier-bar" style="border:none;margin-bottom:0;padding-bottom:0;">
+              <span class="dossier-pill" style="background:var(--error);color:var(--on-error);">模擬試卷 · 10 題</span>
+              <span class="dossier-meta">依據「概念詞背默注意事項」官方指引</span>
+            </div>
+            <h3>英華書院 中一級 公民、經濟與社會科 · 背默模擬試</h3>
+            <p class="exam-instructions">
+              請仔細閱讀以下 10 道題目的概念詞解釋，並在橫線上填寫相應的標準概念詞。
+            </p>
+            <ul class="exam-rules-list">
+              <li>1. 背默全卷共 10 題，限時 5 分鐘，不設加時。</li>
+              <li>2. <strong>每個概念詞在全卷中只可使用一次</strong>，重複使用者該題無效。</li>
+              <li>3. <strong>錯別字獲零分</strong>；完全正確得 1 分，共 10 分滿分。</li>
+            </ul>
+          </div>
+
+          <div class="exam-timer-card">
+            <div class="timer-label">倒數計時</div>
+            <div class="timer-digits" id="exam-timer-display">05:00</div>
+            <button type="button" class="btn-action" id="btn-exam-toggle-timer" onclick="toggleExamTimer()">
+              <i data-lucide="play" id="timer-icon" style="width:14px;height:14px;"></i>
+              <span id="timer-btn-text">開始計時</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Exam Result Report Banner (Visible after submission) -->
+        <div id="exam-result-banner" class="exam-result-banner" style="display:none;">
+          <div class="dossier-meta">測驗批改成績結算</div>
+          <div class="score-headline" id="exam-score-display">-- / 10 分</div>
+          <div class="score-grade" id="exam-grade-display">評級：--</div>
+          <p id="exam-feedback-text" style="font-size:0.9375rem;color:var(--on-surface-variant);margin-bottom:var(--space-md);"></p>
+          <div style="display:flex;gap:var(--space-sm);justify-content:center;flex-wrap:wrap;">
+            <button type="button" class="btn-action active" onclick="startNewExam()">
+              <i data-lucide="rotate-cw" style="width:14px;height:14px;"></i>
+              再做一份新試卷 (重新隨機抽 10 題)
+            </button>
+            <button type="button" class="btn-action" onclick="reviewExamMistakes()">
+              <i data-lucide="bookmark-plus" style="width:14px;height:14px;"></i>
+              將錯題加入重點溫習標記
+            </button>
+          </div>
+        </div>
+
+        <!-- Exam Question List Form -->
+        <form id="exam-form" onsubmit="handleExamSubmit(event)">
+          <div class="exam-q-list" id="exam-questions-list">
+            <!-- Populated dynamically -->
+          </div>
+
+          <div class="exam-actions-bar">
+            <div style="font-size:0.875rem;color:var(--on-surface-variant);">
+              已作答：<span id="exam-answered-count" style="font-weight:700;color:var(--secondary);">0</span> / 10 題
+            </div>
+            <div style="display:flex;gap:var(--space-sm);">
+              <button type="button" class="btn-action" onclick="resetExamAnswers()">
+                <i data-lucide="trash-2" style="width:14px;height:14px;"></i>
+                清空作答
+              </button>
+              <button type="submit" class="btn-submit-exam" id="btn-submit-exam">
+                <i data-lucide="check" style="width:16px;height:16px;"></i>
+                交卷並即時批改
+              </button>
+            </div>
+          </div>
+        </form>
+
+      </section>
+    </div>
+
+    <!-- TAB 4: Dedicated Stroke Order Studio -->
+    <div id="view-stroke-container" style="display:none;">
+      
+      <!-- Character Quick Selection Row -->
+      <div style="background:var(--surface-container-low);border:var(--card-border);border-radius:var(--rounded-md);padding:var(--space-md);margin-bottom:var(--space-lg);">
+        <div class="dossier-bar" style="margin-bottom:var(--space-xs);">
+          <span class="dossier-pill">繁體字筆順 · 香港小學習字表楷書標準</span>
+          <span class="dossier-meta">點選以下重點漢字查看動態筆劃順序與練寫：</span>
+        </div>
+        <div class="character-picker-bar" id="stroke-studio-picker">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Studio Layout: Interactive Mi-Zi-Ge Player & Handwriting Practice Canvas -->
+      <div class="stroke-studio-layout">
+        
+        <!-- Left: Animated SVG Mi-Zi-Ge Player -->
+        <div class="mizige-panel">
+          <div class="char-info-header">
+            <div>
+              <span style="font-family:var(--font-headline);font-size:1.6rem;font-weight:700;" id="studio-char-display">家</span>
+              <span class="char-jyutping" id="studio-jyutping-display">gaa1</span>
+            </div>
+            <div class="char-meta-tags">
+              <span class="char-tag" id="studio-strokes-count">總筆畫：10 劃</span>
+              <span class="char-tag" id="studio-radical">部首：宀部</span>
+              <span class="char-tag" id="studio-structure">結構：上下結構</span>
+            </div>
+          </div>
+
+          <!-- Red-Lined Mi-Zi-Ge Grid Display -->
+          <div class="mizige-canvas-wrapper" id="studio-mizige-box">
+            <!-- SVG Background Grid -->
+            <svg class="mizige-grid-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer border -->
+              <rect x="1" y="1" width="238" height="238" fill="none" stroke="var(--calligraphy-border)" stroke-width="2"/>
+              <!-- Cross lines -->
+              <line x1="120" y1="0" x2="120" y2="240" stroke="var(--calligraphy-grid)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <line x1="0" y1="120" x2="240" y2="120" stroke="var(--calligraphy-grid)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <!-- Diagonal lines -->
+              <line x1="0" y1="0" x2="240" y2="240" stroke="var(--calligraphy-grid)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="240" y1="0" x2="0" y2="240" stroke="var(--calligraphy-grid)" stroke-width="1" stroke-dasharray="3,3"/>
+            </svg>
+
+            <!-- Dynamic Animated Character SVG -->
+            <svg class="mizige-char-svg" id="studio-char-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+              <!-- Rendered dynamically -->
+            </svg>
+          </div>
+
+          <!-- Player Controls -->
+          <div class="player-controls">
+            <button type="button" class="btn-player" onclick="stepBackwardStroke()">
+              <i data-lucide="skip-back" style="width:14px;height:14px;"></i> 上一劃
+            </button>
+            <button type="button" class="btn-player active" id="btn-studio-play" onclick="toggleStrokeAnimation()">
+              <i data-lucide="play" id="studio-play-icon" style="width:14px;height:14px;"></i>
+              <span id="studio-play-text">播放筆順</span>
+            </button>
+            <button type="button" class="btn-player" onclick="stepForwardStroke()">
+              下一劃 <i data-lucide="skip-forward" style="width:14px;height:14px;"></i>
+            </button>
+            <button type="button" class="btn-player" onclick="replayStrokeAnimation()">
+              <i data-lucide="rotate-ccw" style="width:14px;height:14px;"></i> 重播
+            </button>
+            <button type="button" class="btn-player" onclick="speakCurrentStudioChar()">
+              <i data-lucide="volume-2" style="width:14px;height:14px;"></i> 讀音
+            </button>
+          </div>
+
+          <div class="stroke-step-counter" id="studio-step-counter">
+            筆順順序：正在準備...
+          </div>
+
+          <!-- Step-by-Step Breakdown Chips -->
+          <div class="stroke-breakdown-gallery">
+            <div class="breakdown-title">
+              <i data-lucide="list-ordered" style="width:12px;height:12px;"></i>
+              筆劃分解步驟圖 (點擊直達該劃)
+            </div>
+            <div class="breakdown-chips-row" id="studio-breakdown-chips">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Canvas Handwriting Pad -->
+        <div class="practice-pad-panel">
+          <div>
+            <div class="char-info-header">
+              <span style="font-weight:700;font-size:1.1rem;display:flex;align-items:center;gap:var(--space-xs);">
+                <i data-lucide="pen-tool" style="width:16px;height:16px;color:var(--secondary);"></i>
+                米字格習字練寫板
+              </span>
+              <span style="font-size:0.75rem;color:var(--on-surface-variant);">支援觸控筆 / 手指 / 滑鼠臨摹</span>
+            </div>
+
+            <div class="practice-tools-row">
+              <div class="tool-group">
+                <span style="font-size:0.75rem;font-weight:600;">墨水：</span>
+                <button type="button" class="color-btn black active" id="btn-ink-black" onclick="setBrushColor('black')"></button>
+                <button type="button" class="color-btn red" id="btn-ink-red" onclick="setBrushColor('red')"></button>
+              </div>
+
+              <div class="tool-group">
+                <span style="font-size:0.75rem;font-weight:600;">筆觸：</span>
+                <select id="brush-width-select" onchange="setBrushWidth(this.value)" style="border:1px solid var(--outline-variant);border-radius:var(--rounded);padding:0.125rem 0.375rem;background:var(--surface-container);font-size:0.75rem;">
+                  <option value="4">細筆 (4px)</option>
+                  <option value="8" selected>標準毛筆 (8px)</option>
+                  <option value="14">粗筆 (14px)</option>
+                </select>
+              </div>
+
+              <div class="tool-group">
+                <button type="button" class="btn-action" id="btn-toggle-ghost" onclick="toggleGhostGuide()">
+                  <i data-lucide="eye" style="width:12px;height:12px;"></i> 底字描紅
+                </button>
+                <button type="button" class="btn-action" onclick="undoCanvasStroke()">
+                  <i data-lucide="undo-2" style="width:12px;height:12px;"></i> 復原
+                </button>
+                <button type="button" class="btn-action" onclick="clearPracticeCanvas()">
+                  <i data-lucide="trash-2" style="width:12px;height:12px;"></i> 清除
+                </button>
+              </div>
+            </div>
+
+            <!-- Canvas Drawing Surface inside Mi-Zi-Ge -->
+            <div class="mizige-canvas-wrapper" style="width:260px;height:260px;margin:var(--space-sm) auto;">
+              <!-- Mi-Zi-Ge background -->
+              <svg class="mizige-grid-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="258" height="258" fill="none" stroke="var(--calligraphy-border)" stroke-width="2"/>
+                <line x1="130" y1="0" x2="130" y2="260" stroke="var(--calligraphy-grid)" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="0" y1="130" x2="260" y2="130" stroke="var(--calligraphy-grid)" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="0" y1="0" x2="260" y2="260" stroke="var(--calligraphy-grid)" stroke-width="1" stroke-dasharray="3,3"/>
+                <line x1="260" y1="0" x2="0" y2="260" stroke="var(--calligraphy-grid)" stroke-width="1" stroke-dasharray="3,3"/>
+              </svg>
+
+              <!-- Ghost Character Outline Guide for Tracing -->
+              <div id="canvas-ghost-char" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-headline);font-size:180px;color:var(--brush-ghost);pointer-events:none;user-select:none;line-height:1;">
+                家
+              </div>
+
+              <!-- Drawing Canvas -->
+              <canvas id="practice-canvas" width="260" height="260" class="mizige-draw-canvas"></canvas>
+            </div>
+          </div>
+
+          <div style="background:var(--surface-container);border-radius:var(--rounded);padding:var(--space-sm);font-size:0.8125rem;color:var(--on-surface-variant);margin-top:var(--space-md);">
+            <strong style="color:var(--secondary);">香港教育局楷書規範提醒：</strong>
+            注意間架結構與起筆收筆，切勿寫簡體字或別字（如「羣」作「群」、「融」從「鬲」從「虫」等香港常用字形表標準）。
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Quick Modal Sheet for Single Character Inspection -->
+    <div class="modal-backdrop" id="char-modal-backdrop">
+      <div class="modal-sheet">
+        <button type="button" class="modal-close-btn" onclick="closeCharModal()" aria-label="關閉視窗">
+          <i data-lucide="x" style="width:16px;height:16px;"></i>
+        </button>
+        <div class="dossier-bar">
+          <span class="dossier-pill">漢字筆順速查</span>
+          <span class="dossier-meta" id="modal-char-subtitle">香港小學習字表規範</span>
+        </div>
+        <div id="modal-content-slot">
+          <!-- Dynamically cloned studio element -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Element -->
+    <div id="app-toast" class="toast-box">
+      <i data-lucide="info" style="width:16px;height:16px;"></i>
+      <span id="toast-message">操作成功</span>
+    </div>
+
+    <!-- Footer / Source & Methodology Note -->
+    <footer class="aside-box">
+      <h4>教材來源與規範說明 · SOURCES & SPECIFICATIONS</h4>
+      <p style="margin-bottom:0.25rem;">
+        本學習工具依據英華書院中一級公民、經濟與社會科《單元1.2 個人成長（一）概念詞表》全部 37 個概念詞及解釋製作。
+      </p>
+      <p>
+        背默考核規則嚴格參照《概念詞背默注意事項》（全卷 10 題，限時 5 分鐘，概念詞限用一次，錯別字獲零分）。筆劃順序標準遵循香港教育局《香港小學習字表》繁體楷書規範。
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- Notebook persistence API shim -->
+  <api-shim></api-shim>
+
+  <script>
+    /* =====================================================================
+       1. DATASET: ALL 37 CONCEPTS FROM PDF MATERIAL
+       ===================================================================== */
+    const CONCEPTS_DATA = [
+      {
+        id: 1,
+        term: "家庭",
+        altTerms: ["家庭"],
+        day: 1,
+        dayLabel: "第 1 天 · 家庭結構",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "是血緣、姻親、收養等親族關係連帶的羣體。一般由夫婦、子女、兄弟姊妹所構成，是社會最基本的單位，亦是我們出生後最先接觸和生活的地方",
+        keyPoints: ["血緣、姻親、收養", "社會最基本的單位", "出生後最先接觸和生活的地方"],
+        characters: ["家", "庭"],
+        jyutping: "gaa1 ting4",
+        examHint: "強調「社會最基本單位」與「血緣/姻親/收養」關係。"
+      },
+      {
+        id: 2,
+        term: "延伸家庭",
+        altTerms: ["延伸家庭", "大家庭"],
+        day: 1,
+        dayLabel: "第 1 天 · 家庭結構",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "兩代或以上的家庭成員組成，又稱為「大家庭」",
+        keyPoints: ["兩代或以上", "又稱為大家庭"],
+        characters: ["延", "伸", "家", "庭"],
+        jyutping: "jin4 san1 gaa1 ting4",
+        examHint: "關鍵在於「兩代或以上」成員共住。"
+      },
+      {
+        id: 3,
+        term: "核心家庭",
+        altTerms: ["核心家庭", "小家庭"],
+        day: 1,
+        dayLabel: "第 1 天 · 家庭結構",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "一個人與配偶和子女所組成的家庭，又稱為「小家庭」",
+        keyPoints: ["夫婦與子女", "又稱為小家庭"],
+        characters: ["核", "心", "家", "庭"],
+        jyutping: "hat6 sam1 gaa1 ting4",
+        examHint: "僅包含夫妻及未婚子女的單一核心單位。"
+      },
+      {
+        id: 4,
+        term: "丁克家庭",
+        altTerms: ["丁克家庭"],
+        day: 1,
+        dayLabel: "第 1 天 · 家庭結構",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "一對夫婦各有工作，有兩份收入，有生育能力但選擇不生育",
+        keyPoints: ["兩份收入 (DINK)", "有生育能力但選擇不生育"],
+        characters: ["丁", "克", "家", "庭"],
+        jyutping: "ding1 hak1 gaa1 ting4",
+        examHint: "源自 Double Income No Kids，主動選擇不生育。"
+      },
+      {
+        id: 5,
+        term: "親子關係",
+        altTerms: ["親子關係"],
+        day: 1,
+        dayLabel: "第 1 天 · 代際相處",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "父母與子女之間的關係，包括父母與子女的溝通和互相信任的情況",
+        keyPoints: ["父母與子女", "溝通與互相信任"],
+        characters: ["親", "子", "關", "係"],
+        jyutping: "can1 zi2 gwaan1 hai6",
+        examHint: "核心包含溝通品質與信任程度。"
+      },
+      {
+        id: 6,
+        term: "縱向關係",
+        altTerms: ["縱向關係"],
+        day: 1,
+        dayLabel: "第 1 天 · 代際相處",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "親子關係一開始以「縱向關係」的形式存在，即由父母照顧子女，子女服從父母",
+        keyPoints: ["父母照顧子女", "子女服從父母", "權力上下不對稱"],
+        characters: ["縱", "向", "關", "係"],
+        jyutping: "zung3 hoeng3 gwaan1 hai6",
+        examHint: "幼年期父母主導照顧、子女服從的垂直結構。"
+      },
+      {
+        id: 7,
+        term: "橫向關係",
+        altTerms: ["橫向關係"],
+        day: 1,
+        dayLabel: "第 1 天 · 代際相處",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "當子女長大，心智變得成熟並能獨立地在社會生活，父母與子女會發展成朋輩般的「橫向關係」，較為平等相待",
+        keyPoints: ["子女長大心智成熟", "朋輩般", "較為平等相待"],
+        characters: ["橫", "向", "關", "係"],
+        jyutping: "waang4 hoeng3 gwaan1 hai6",
+        examHint: "成熟獨立後發展出的平等朋輩式相處模式。"
+      },
+      {
+        id: 8,
+        term: "家庭衝突",
+        altTerms: ["家庭衝突"],
+        day: 1,
+        dayLabel: "第 1 天 · 代際相處",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "家人對事情的看法不同而產生摩擦",
+        keyPoints: ["看法不同", "產生摩擦"],
+        characters: ["家", "庭", "衝", "突"],
+        jyutping: "gaa1 ting4 cung1 dat6",
+        examHint: "由觀點分歧引發的家庭內部摩擦。"
+      },
+      {
+        id: 9,
+        term: "家庭管教方式/ 父母管教模式",
+        altTerms: ["家庭管教方式", "父母管教模式", "家庭管教方式/ 父母管教模式"],
+        day: 1,
+        dayLabel: "第 1 天 · 代際相處",
+        category: "家庭結構與代際關係",
+        categoryKey: "family",
+        definition: "指父母對待和指導子女的方式",
+        keyPoints: ["對待和指導子女的方式"],
+        characters: ["管", "教", "模", "式"],
+        jyutping: "gun2 gaau3 mou4 sik1",
+        examHint: "可答「家庭管教方式」或「父母管教模式」。"
+      },
+      {
+        id: 10,
+        term: "專制權威型",
+        altTerms: ["專制權威型"],
+        day: 2,
+        dayLabel: "第 2 天 · 管教模式",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "父母要求高、情感回應程度低，依照一套硬性的規條管制子女行為，要求子女服從和尊崇，親子間較缺乏溝通，雙方的關係相對疏離",
+        keyPoints: ["要求高、回應低", "硬性規條", "關係相對疏離"],
+        characters: ["專", "制", "權", "威", "型"],
+        jyutping: "zyun1 zai3 kyun4 wai1 jing4",
+        examHint: "高要求、低情感回應，管束嚴苛關係疏離。"
+      },
+      {
+        id: 11,
+        term: "開明權威型",
+        altTerms: ["開明權威型"],
+        day: 2,
+        dayLabel: "第 2 天 · 管教模式",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "父母對子女的要求和情感回應程度皆高，既訂立明確的行為規範，又會回應子女的需要，採取開放的態度和方式與子女溝通，令親子關係較為親密",
+        keyPoints: ["要求高、回應高", "明確行為規範", "開放溝通、關係親密"],
+        characters: ["開", "明", "權", "威", "型"],
+        jyutping: "hoi1 ming4 kyun4 wai1 jing4",
+        examHint: "高要求、高情感回應，兼具原則與溫暖。"
+      },
+      {
+        id: 12,
+        term: "忽視冷漠型",
+        altTerms: ["忽視冷漠型"],
+        day: 2,
+        dayLabel: "第 2 天 · 管教模式",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "父母對子女的要求和情感回應程度皆低，既不關懷也不管束子女，無視子女情況和需要。因溝通及理解的不足，親子關係容易出現隔閡",
+        keyPoints: ["要求低、回應低", "不關懷也不管束", "容易出現隔閡"],
+        characters: ["忽", "視", "冷", "漠", "型"],
+        jyutping: "fat1 si6 laang5 mok6 jing4",
+        examHint: "低要求、低回應，放任不理且缺乏愛與溝通。"
+      },
+      {
+        id: 13,
+        term: "寬鬆放任型",
+        altTerms: ["寬鬆放任型"],
+        day: 2,
+        dayLabel: "第 2 天 · 管教模式",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "父母要求低、情感回應程度高，儘管在情感上支持子女，但鮮有指導子女行為，不能堅定地對子女執行規條，較少處罰，親子關係較為親密",
+        keyPoints: ["要求低、回應高", "鮮有指導行為", "較少處罰、關係親密"],
+        characters: ["寬", "鬆", "放", "任", "型"],
+        jyutping: "fun1 sung1 fong3 jam6 jing4",
+        examHint: "低要求、高回應，有愛但缺乏規條管束。"
+      },
+      {
+        id: 14,
+        term: "競爭",
+        altTerms: ["競爭"],
+        day: 2,
+        dayLabel: "第 2 天 · 衝突處理",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "雙方為求自身利益與對方起衝突，強求對方改變",
+        keyPoints: ["為求自身利益", "強求對方改變", "零和博弈"],
+        characters: ["競", "爭"],
+        jyutping: "ging6 zang1",
+        examHint: "只顧自我利益，逼迫對方讓步退縮。"
+      },
+      {
+        id: 15,
+        term: "妥協",
+        altTerms: ["妥協"],
+        day: 2,
+        dayLabel: "第 2 天 · 衝突處理",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "雙方一人各讓一步，並同意放棄部分利益，互相妥協",
+        keyPoints: ["一人各讓一步", "放棄部分利益"],
+        characters: ["妥", "協"],
+        jyutping: "to2 hip3",
+        examHint: "各退一步，各自割捨部分利益求取折衷。"
+      },
+      {
+        id: 16,
+        term: "合作",
+        altTerms: ["合作"],
+        day: 2,
+        dayLabel: "第 2 天 · 衝突處理",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "雙方坦誠地溝通合作，達致共識，最後雙方也能滿足",
+        keyPoints: ["坦誠溝通", "達致共識", "雙方也能滿足 (雙贏)"],
+        characters: ["合", "作"],
+        jyutping: "hap6 zok3",
+        examHint: "雙贏模式，經深層溝通使雙方需求皆得滿足。"
+      },
+      {
+        id: 17,
+        term: "逃避",
+        altTerms: ["逃避"],
+        day: 2,
+        dayLabel: "第 2 天 · 衝突處理",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "雙方迴避衝突來源，不正面解決，亦不作改變",
+        keyPoints: ["迴避衝突來源", "不正面解決", "不作改變"],
+        characters: ["逃", "避"],
+        jyutping: "tou4 bei6",
+        examHint: "消極迴避，對問題置之不理。"
+      },
+      {
+        id: 18,
+        term: "通融",
+        altTerms: ["通融"],
+        day: 2,
+        dayLabel: "第 2 天 · 衝突處理",
+        category: "父母管教與衝突模式",
+        categoryKey: "parenting",
+        definition: "衝突的其中一方自動退出競爭，不與對方硬碰",
+        keyPoints: ["自動退出競爭", "不與對方硬碰"],
+        characters: ["通", "融"],
+        jyutping: "tung1 jung4",
+        examHint: "單方面放棄堅持，遷就顧全對方。"
+      },
+      {
+        id: 19,
+        term: "代溝",
+        altTerms: ["代溝"],
+        day: 3,
+        dayLabel: "第 3 天 · 溝通智慧",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "成長在不同世代的人，由於歷史時代、社會環境和生活經驗的不同，而在價值、態度、生活習慣和行為等方面出現差異",
+        keyPoints: ["不同世代", "環境經驗不同", "價值與習慣差異"],
+        characters: ["代", "溝"],
+        jyutping: "doi6 gau1",
+        examHint: "世代生活背景差異導致的思想與生活鴻溝。"
+      },
+      {
+        id: 20,
+        term: "尊重",
+        altTerms: ["尊重"],
+        day: 3,
+        dayLabel: "第 3 天 · 溝通智慧",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "是一種表現關懷、考慮他人需求與感受的行為，並非盲目迎合，而是以理解和包容的態度對待人與事物，接納差異",
+        keyPoints: ["表現關懷", "非盲目迎合", "理解包容、接納差異"],
+        characters: ["尊", "重"],
+        jyutping: "zyun1 zung6",
+        examHint: "重在「非盲目迎合」，以理解接納彼此差異。"
+      },
+      {
+        id: 21,
+        term: "家庭凝聚力",
+        altTerms: ["家庭凝聚力"],
+        day: 3,
+        dayLabel: "第 3 天 · 溝通智慧",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "指家庭成員之間關係緊密，並認同大家同屬一個羣體",
+        keyPoints: ["關係緊密", "認同同屬一個羣體"],
+        characters: ["凝", "聚", "力"],
+        jyutping: "jing4 zeoi6 lik6",
+        examHint: "成員間的心理認同與向心連結力。"
+      },
+      {
+        id: 22,
+        term: "溝通技巧",
+        altTerms: ["溝通技巧"],
+        day: 3,
+        dayLabel: "第 3 天 · 溝通智慧",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "溝通是透過語言及非語言的互動，分享訊息、意見及感受的過程",
+        keyPoints: ["語言及非語言互動", "分享訊息、意見及感受"],
+        characters: ["溝", "通", "技", "巧"],
+        jyutping: "kau1 tung1 gei1 haau2",
+        examHint: "包含言語及肢體神態等非言語互動能力。"
+      },
+      {
+        id: 23,
+        term: "生活方式",
+        altTerms: ["生活方式"],
+        day: 3,
+        dayLabel: "第 3 天 · 溝通智慧",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "包括人們的衣、食、住、行、工作、休息娛樂、社會互動、待人接物等物質生活和精神生活的取向等",
+        keyPoints: ["衣食住行工作娛樂", "物質與精神生活取向"],
+        characters: ["生", "活", "方", "式"],
+        jyutping: "sang1 wut6 fong1 sik1",
+        examHint: "涵蓋各生活層面之整體習慣與精神取向。"
+      },
+      {
+        id: 24,
+        term: "正向溝通",
+        altTerms: ["正向溝通"],
+        day: 3,
+        dayLabel: "第 3 天 · 溝通智慧",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "指關係中雙向而有質素的溝通方式",
+        keyPoints: ["雙向", "有質素的溝通方式"],
+        characters: ["正", "向", "溝", "通"],
+        jyutping: "zing3 hoeng3 kau1 tung1",
+        examHint: "強調具建設性、彼此尊重且雙向傾聽。"
+      },
+      {
+        id: 25,
+        term: "友誼",
+        altTerms: ["友誼"],
+        day: 3,
+        dayLabel: "第 3 天 · 朋輩交往",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "指人與人認識過程中所建立的一種感情，它建基於互相信任、尊重、支持和了解",
+        keyPoints: ["認識過程中所建立", "信任、尊重、支持和了解"],
+        characters: ["友", "誼"],
+        jyutping: "jau5 ji4",
+        examHint: "四大支柱：信任、尊重、支持與了解。"
+      },
+      {
+        id: 26,
+        term: "從眾壓力/ 朋輩壓力",
+        altTerms: ["從眾壓力", "朋輩壓力", "從眾壓力/ 朋輩壓力"],
+        day: 3,
+        dayLabel: "第 3 天 · 朋輩交往",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "青少年為了獲得朋輩的接受或在羣體壓力下，會跟從朋輩的價值觀，可能會放棄個人的意見而採取與大多數人一致的想法與行為",
+        keyPoints: ["獲朋輩接受", "跟從朋輩價值觀", "放棄個人意見"],
+        characters: ["從", "眾", "壓", "力"],
+        jyutping: "cung4 zung3 aat3 lik6",
+        examHint: "可答「從眾壓力」或「朋輩壓力」。"
+      },
+      {
+        id: 27,
+        term: "多元社會",
+        altTerms: ["多元社會"],
+        day: 3,
+        dayLabel: "第 3 天 · 社會結構",
+        category: "人際溝通與朋輩相處",
+        categoryKey: "communication",
+        definition: "指一個能夠讓不同種族和宗教共存，並可持續發展本地文化，以及獲得其他社羣尊重與包容的社會體系",
+        keyPoints: ["不同種族宗教共存", "發展本地文化", "尊重與包容"],
+        characters: ["多", "元", "社", "會"],
+        jyutping: "do1 jyun4 se5 wui2",
+        examHint: "各族裔及信仰並存互重之包容性體系。"
+      },
+      {
+        id: 28,
+        term: "社羣",
+        altTerms: ["社羣", "社群"],
+        day: 4,
+        dayLabel: "第 4 天 · 社會結構",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "社會由不同背景人士組成，當中有共同目標、價值觀、問題、利益和階層所組成的羣體",
+        keyPoints: ["共同目標、價值觀", "共同利益或階層"],
+        characters: ["社", "羣"],
+        jyutping: "se5 kwan4",
+        examHint: "具有共同目標與價值信念的集體人羣。"
+      },
+      {
+        id: 29,
+        term: "價值觀",
+        altTerms: ["價值觀"],
+        day: 4,
+        dayLabel: "第 4 天 · 核心素養",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "指個人或羣體的信念，也是判斷是非對錯的標準",
+        keyPoints: ["個人或羣體信念", "判斷是非對錯的標準"],
+        characters: ["價", "值", "觀"],
+        jyutping: "gaa3 zik6 gun1",
+        examHint: "判斷善惡、衡量是非之內在準則。"
+      },
+      {
+        id: 30,
+        term: "共融",
+        altTerms: ["共融"],
+        day: 4,
+        dayLabel: "第 4 天 · 社會共融",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "是建立和諧、關愛社會的重要元素，使我們意識到彼此的共通與差異，並能消除彼此的隔膜",
+        keyPoints: ["和諧關愛元素", "意識共通與差異", "消除彼此隔膜"],
+        characters: ["共", "融"],
+        jyutping: "gung6 jung4",
+        examHint: "跨越隔閡、擁抱相異、和諧關愛的關鍵。"
+      },
+      {
+        id: 31,
+        term: "知己",
+        altTerms: ["知己"],
+        day: 4,
+        dayLabel: "第 4 天 · 人際深度",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "數量最少，是生命中最佳的夥伴，彼此非常熟悉，互有默契，會經常鼓勵及支持對方",
+        keyPoints: ["數量最少", "最佳夥伴、默契深厚", "經常鼓勵及支持"],
+        characters: ["知", "己"],
+        jyutping: "zi1 gei2",
+        examHint: "最深厚的人際層次，互信默契無間。"
+      },
+      {
+        id: 32,
+        term: "點頭之交",
+        altTerms: ["點頭之交"],
+        day: 4,
+        dayLabel: "第 4 天 · 人際深度",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "指交情甚淺，見面只不過點頭打招呼而已",
+        keyPoints: ["交情甚淺", "點頭打招呼而已"],
+        characters: ["點", "頭", "之", "交"],
+        jyutping: "dim2 tau4 zi1 gaau1",
+        examHint: "最淺層的人際關係，僅止於禮貌問好。"
+      },
+      {
+        id: 33,
+        term: "同理心",
+        altTerms: ["同理心"],
+        day: 4,
+        dayLabel: "第 4 天 · 核心素養",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "指能夠站在對方立場設身處地思考、於人際交往過程中能夠體會他人的情緒和想法、理解他人的立場和感受，並站在他人的角度思考和處理問題",
+        keyPoints: ["設身處地", "體會他人情緒與想法", "站在他人角度處理問題"],
+        characters: ["同", "理", "心"],
+        jyutping: "tung4 lei5 sam1",
+        examHint: "設身處地感受他人情緒與立場之能力。"
+      },
+      {
+        id: 34,
+        term: "國際視野",
+        altTerms: ["國際視野"],
+        day: 4,
+        dayLabel: "第 4 天 · 核心素養",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "指個人對國際形勢、國家關係、國際問題等分析能力",
+        keyPoints: ["國際形勢", "國家關係", "國際問題分析能力"],
+        characters: ["國", "際", "視", "野"],
+        jyutping: "gwok3 zai3 si6 je5",
+        examHint: "宏觀分析全球事件及跨國關係之能力。"
+      },
+      {
+        id: 35,
+        term: "生活技能",
+        altTerms: ["生活技能"],
+        day: 4,
+        dayLabel: "第 4 天 · 核心素養",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "是指個人在社會上生存所需要的特定能力，包括要學會以正面、恰當的行為來面對及處理生活帶來的不同挑戰",
+        keyPoints: ["社會生存特定能力", "正面恰當行為", "處理生活不同挑戰"],
+        characters: ["生", "活", "技", "能"],
+        jyutping: "sang1 wut6 gei1 nang4",
+        examHint: "適應現代社會生活與應對挑戰之綜合能力。"
+      },
+      {
+        id: 36,
+        term: "少數族裔",
+        altTerms: ["少數族裔"],
+        day: 4,
+        dayLabel: "第 4 天 · 社會共融",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "香港約九成人口為華人，其他非華族裔稱為少數族裔。香港的少數族裔大多來自印尼、菲律賓、巴基斯坦、尼泊爾等地區",
+        keyPoints: ["非華族裔", "印尼、菲律賓、巴基斯坦、尼泊爾"],
+        characters: ["少", "數", "族", "裔"],
+        jyutping: "siu2 sou3 zuk6 jeoi6",
+        examHint: "常考印尼、菲律賓、巴基斯坦、尼泊爾等來源地。"
+      },
+      {
+        id: 37,
+        term: "弱勢社羣",
+        altTerms: ["弱勢社羣", "弱勢社群"],
+        day: 4,
+        dayLabel: "第 4 天 · 社會共融",
+        category: "多元社會與弱勢共融",
+        categoryKey: "inclusion",
+        definition: "指社會上有需要接受援助或接濟的少數羣體，例如獨居長者、傷殘人士、露宿者等。他們因缺乏資源或工作技能，難以憑自身努力爭取到合理的待遇或生活條件",
+        keyPoints: ["需接受援助或接濟", "獨居長者、傷殘人士、露宿者", "缺乏資源或技能"],
+        characters: ["弱", "勢", "社", "羣"],
+        jyutping: "joek6 sai3 se5 kwan4",
+        examHint: "重點舉例：獨居長者、傷殘人士、露宿者。"
+      }
+    ];
+
+    /* =====================================================================
+       2. CHINESE CHARACTERS STROKE METADATA & PATHS (HK Standard)
+       ===================================================================== */
+    const CHARACTER_DICT = {
+      "家": {
+        jyutping: "gaa1",
+        strokes: 10,
+        radical: "宀部",
+        structure: "上下結構",
+        rules: "從上到下，先外後內",
+        strokeNames: ["點", "點", "橫撇", "橫", "撇", "彎鈎", "撇", "撇", "撇", "捺"],
+        strokePaths: [
+          "M 120,30 L 120,55",
+          "M 65,65 L 60,85",
+          "M 65,65 L 175,65 L 165,95",
+          "M 80,105 L 160,105",
+          "M 120,105 Q 90,140 60,165",
+          "M 120,105 Q 135,160 135,190 Q 135,210 115,205",
+          "M 105,130 Q 85,155 65,180",
+          "M 110,150 Q 90,175 75,200",
+          "M 115,170 Q 100,195 85,220",
+          "M 125,140 Q 155,180 185,210"
+        ]
+      },
+      "庭": {
+        jyutping: "ting4",
+        strokes: 9,
+        radical: "广部",
+        structure: "半包圍結構",
+        rules: "先外後內，左包右",
+        strokeNames: ["點", "橫", "撇", "橫", "橫", "豎", "橫折", "橫", "捺"],
+        strokePaths: [
+          "M 110,25 L 110,50",
+          "M 55,55 L 185,55",
+          "M 75,60 Q 60,130 35,200",
+          "M 95,90 L 175,90",
+          "M 95,115 L 175,115",
+          "M 130,75 L 130,170",
+          "M 95,145 L 165,145 L 165,175",
+          "M 95,175 L 165,175",
+          "M 75,185 Q 130,190 205,210"
+        ]
+      },
+      "融": {
+        jyutping: "jung4",
+        strokes: 16,
+        radical: "虫部",
+        structure: "左右結構",
+        rules: "從左到右，先鬲後虫",
+        strokeNames: ["橫", "豎", "橫折", "橫", "豎", "橫折", "橫", "豎", "撇", "點", "豎", "橫折", "橫", "豎", "提", "點"],
+        strokePaths: [
+          "M 40,40 L 105,40",
+          "M 50,45 L 45,75",
+          "M 50,75 L 95,75 L 90,105",
+          "M 50,105 L 90,105",
+          "M 70,40 L 70,105",
+          "M 45,120 L 100,120 L 95,150",
+          "M 50,150 L 95,150",
+          "M 70,120 L 70,195",
+          "M 55,160 Q 40,185 30,205",
+          "M 85,160 Q 95,180 105,205",
+          "M 135,70 L 135,130",
+          "M 135,75 L 195,75 L 195,125",
+          "M 135,125 L 195,125",
+          "M 165,40 L 165,190",
+          "M 135,185 L 195,170",
+          "M 180,145 L 200,165"
+        ]
+      },
+      "權": {
+        jyutping: "kyun4",
+        strokes: 22,
+        radical: "木部",
+        structure: "左右結構",
+        rules: "先左後右，木字旁先橫後豎",
+        strokeNames: ["橫", "豎", "撇", "點", "橫", "豎", "豎", "橫", "橫", "豎", "橫折", "橫", "橫", "豎", "橫", "豎", "撇", "豎", "點", "橫", "橫", "橫"],
+        strokePaths: [
+          "M 30,95 L 85,90",
+          "M 60,40 L 60,205",
+          "M 60,95 Q 45,140 25,175",
+          "M 70,115 L 90,145",
+          "M 105,55 L 195,50",
+          "M 125,35 L 125,75",
+          "M 175,35 L 175,75",
+          "M 115,75 L 185,75",
+          "M 115,100 L 185,100",
+          "M 115,100 L 115,155",
+          "M 115,100 L 185,100 L 185,155",
+          "M 115,130 L 185,130",
+          "M 115,155 L 185,155",
+          "M 150,100 L 150,210",
+          "M 110,185 L 190,185",
+          "M 105,210 L 195,210"
+        ]
+      },
+      "協": {
+        jyutping: "hip3",
+        strokes: 8,
+        radical: "十部",
+        structure: "左右結構",
+        rules: "先左後右，三力相疊",
+        strokeNames: ["橫", "豎", "橫折鈎", "撇", "橫折鈎", "撇", "橫折鈎", "撇"],
+        strokePaths: [
+          "M 25,115 L 80,115",
+          "M 50,45 L 50,200",
+          "M 115,60 L 165,60 L 165,105 Q 165,115 150,115",
+          "M 145,65 Q 125,95 105,115",
+          "M 95,140 L 140,140 L 140,185 Q 140,195 125,195",
+          "M 125,145 Q 105,175 85,195",
+          "M 155,140 L 200,140 L 200,185 Q 200,195 185,195",
+          "M 185,145 Q 165,175 145,195"
+        ]
+      },
+      "羣": {
+        jyutping: "kwan4",
+        strokes: 13,
+        radical: "羊部",
+        structure: "上下結構",
+        rules: "從上到下，君字在上羊字在下",
+        strokeNames: ["橫折", "橫", "撇", "豎", "橫折", "橫", "點", "撇", "橫", "橫", "豎", "橫", "豎"],
+        strokePaths: [
+          "M 75,35 L 160,35 L 160,65",
+          "M 75,65 L 160,65",
+          "M 85,35 Q 70,80 50,115",
+          "M 95,80 L 95,115",
+          "M 95,80 L 155,80 L 155,115",
+          "M 95,115 L 155,115",
+          "M 85,135 L 105,150",
+          "M 150,135 L 130,150",
+          "M 65,160 L 175,160",
+          "M 80,180 L 160,180",
+          "M 60,200 L 180,200",
+          "M 120,150 L 120,225"
+        ]
+      },
+      "尊": {
+        jyutping: "zyun1",
+        strokes: 12,
+        radical: "寸部",
+        structure: "上下結構",
+        rules: "從上到下，先酋後寸",
+        strokeNames: ["點", "撇", "橫", "豎", "橫折", "橫", "橫", "橫", "橫", "豎鈎", "點"],
+        strokePaths: [
+          "M 80,30 L 95,45",
+          "M 155,30 L 140,45",
+          "M 55,60 L 185,60",
+          "M 75,75 L 75,135",
+          "M 75,75 L 165,75 L 165,135",
+          "M 75,105 L 165,105",
+          "M 75,135 L 165,135",
+          "M 50,155 L 190,155",
+          "M 145,140 L 145,215 Q 145,225 130,220",
+          "M 85,180 L 105,195"
+        ]
+      },
+      "親": {
+        jyutping: "can1",
+        strokes: 16,
+        radical: "見部",
+        structure: "左右結構",
+        rules: "從左到右，先立木後見",
+        strokeNames: ["點", "橫", "點", "撇", "橫", "橫", "豎", "撇", "捺", "豎", "橫折", "橫", "橫", "橫", "撇", "豎彎鈎"],
+        strokePaths: [
+          "M 70,30 L 70,45",
+          "M 45,55 L 95,55",
+          "M 55,65 L 60,80",
+          "M 85,65 L 80,80",
+          "M 40,85 L 100,85",
+          "M 45,115 L 95,115",
+          "M 70,95 L 70,195",
+          "M 70,125 Q 50,165 30,190",
+          "M 75,140 L 100,175",
+          "M 130,55 L 130,145",
+          "M 130,55 L 185,55 L 185,145",
+          "M 130,85 L 185,85",
+          "M 130,115 L 185,115",
+          "M 130,145 L 185,145",
+          "M 145,150 Q 130,185 115,210",
+          "M 165,150 Q 165,215 195,215 L 205,215"
+        ]
+      }
+    };
+
+    /* Fallback generic stroke definitions for any Chinese character */
+    function getCharacterMeta(char) {
+      if (CHARACTER_DICT[char]) {
+        return CHARACTER_DICT[char];
+      }
+      return {
+        jyutping: "標準音",
+        strokes: 8,
+        radical: "漢字部首",
+        structure: "合體字",
+        rules: "從左到右，從上到下",
+        strokeNames: ["橫", "豎", "撇", "捺", "點", "橫折", "撇", "橫"],
+        strokePaths: [
+          "M 50,55 L 190,55",
+          "M 120,40 L 120,190",
+          "M 120,70 Q 80,120 45,170",
+          "M 120,70 Q 160,120 195,170",
+          "M 80,105 L 95,120",
+          "M 70,135 L 170,135 L 170,180",
+          "M 100,150 Q 85,175 70,200",
+          "M 70,180 L 170,180"
+        ]
+      };
+    }
+
+    /* =====================================================================
+       3. STATE MANAGEMENT & DATA PERSISTENCE
+       ===================================================================== */
+    let currentMainTab = 'explorer';
+    let currentDayFilter = 'all';
+    let currentCategoryFilter = 'all';
+    let searchQuery = '';
+    let filterMasteredOnly = false;
+    let currentMaskMode = 'none'; // 'none' | 'def' | 'term'
+
+    let currentSpeechRate = 1.0;
+    let currentStrokeSpeed = 1.0;
+
+    let masteredIds = new Set();
+    let needsReviewIds = new Set();
+
+    // Studio & Practice State
+    let currentChar = "家";
+    let currentStrokeIdx = 0;
+    let isPlayingStroke = false;
+    let strokeTimer = null;
+    let currentBrushColor = "black";
+    let currentBrushWidth = 8;
+    let showGhostGuide = true;
+    let canvasHistory = [];
+    let isDrawing = false;
+
+    // Exam State
+    let examActive = false;
+    let examTimeSeconds = 300; // 5 minutes
+    let examTimerInterval = null;
+    let examQuestions = [];
+
+    /* Load and Persist State via api-shim */
+    async function loadSavedState() {
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === 'function') {
+          const state = await window.notebookAppApi.getAppState();
+          if (state) {
+            if (Array.isArray(state.masteredIds)) {
+              masteredIds = new Set(state.masteredIds);
+            }
+            if (Array.isArray(state.needsReviewIds)) {
+              needsReviewIds = new Set(state.needsReviewIds);
+            }
+            if (state.speechRate) {
+              currentSpeechRate = parseFloat(state.speechRate) || 1.0;
+              const slider = document.getElementById('speech-rate-slider');
+              const label = document.getElementById('speech-rate-label');
+              if (slider) slider.value = currentSpeechRate;
+              if (label) label.textContent = `${currentSpeechRate}x`;
+            }
+            if (state.strokeSpeed) {
+              currentStrokeSpeed = parseFloat(state.strokeSpeed) || 1.0;
+              const slider = document.getElementById('stroke-speed-slider');
+              const label = document.getElementById('stroke-speed-label');
+              if (slider) slider.value = currentStrokeSpeed;
+              if (label) label.textContent = `${currentStrokeSpeed}x`;
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('Could not restore app state:', err);
+      }
+      updateMasteredStats();
+      renderConceptCards();
+    }
+
+    async function persistState() {
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === 'function') {
+          await window.notebookAppApi.setAppState({
+            masteredIds: Array.from(masteredIds),
+            needsReviewIds: Array.from(needsReviewIds),
+            speechRate: currentSpeechRate,
+            strokeSpeed: currentStrokeSpeed
+          });
+        }
+      } catch (err) {
+        console.warn('Could not save state:', err);
+      }
+    }
+
+    /* =====================================================================
+       4. AUDIO & CANTONESE TTS (Web Speech API)
+       ===================================================================== */
+    function speakCantonese(text, sourceBtn = null) {
+      if (!('speechSynthesis' in window)) {
+        showToast('閣下的瀏覽器目前不支援語音合成功能');
+        return;
+      }
+      window.speechSynthesis.cancel();
+
+      if (sourceBtn && sourceBtn.classList.contains('playing')) {
+        sourceBtn.classList.remove('playing');
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'zh-HK';
+      utterance.rate = currentSpeechRate;
+
+      // Select Cantonese / HK voice if present
+      const voices = window.speechSynthesis.getVoices();
+      const hkVoice = voices.find(v => 
+        v.lang === 'zh-HK' || 
+        v.lang === 'zh_HK' || 
+        v.name.includes('Hong Kong') || 
+        v.name.includes('Cantonese') || 
+        v.name.includes('粵語')
+      );
+      if (hkVoice) {
+        utterance.voice = hkVoice;
+      }
+
+      if (sourceBtn) {
+        document.querySelectorAll('.tts-inline-btn.playing').forEach(b => b.classList.remove('playing'));
+        sourceBtn.classList.add('playing');
+        utterance.onend = () => sourceBtn.classList.remove('playing');
+        utterance.onerror = () => sourceBtn.classList.remove('playing');
+      }
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function stopAllSpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      document.querySelectorAll('.tts-inline-btn.playing').forEach(b => b.classList.remove('playing'));
+      showToast('已停止語音朗讀');
+    }
+
+    function testCantoneseVoice() {
+      speakCantonese('歡迎溫習英華書院公民、經濟與社會科單元1.2概念詞！');
+    }
+
+    function updateSpeechRate(val) {
+      currentSpeechRate = parseFloat(val) || 1.0;
+      const label = document.getElementById('speech-rate-label');
+      if (label) label.textContent = `${currentSpeechRate.toFixed(1)}x`;
+      persistState();
+    }
+
+    /* =====================================================================
+       5. CARDS RENDERING & INTERACTIVE EXPLORER
+       ===================================================================== */
+    function renderConceptCards() {
+      const container = document.getElementById('concepts-grid');
+      if (!container) return;
+
+      const filtered = CONCEPTS_DATA.filter(item => {
+        // Day filter
+        if (currentDayFilter !== 'all' && item.day !== parseInt(currentDayFilter, 10)) {
+          return false;
+        }
+        // Category filter
+        if (currentCategoryFilter !== 'all' && item.categoryKey !== currentCategoryFilter) {
+          return false;
+        }
+        // Mastered only filter
+        if (filterMasteredOnly && masteredIds.has(item.id)) {
+          return false;
+        }
+        // Search query
+        if (searchQuery.trim() !== '') {
+          const q = searchQuery.toLowerCase().trim();
+          const matchTerm = item.term.toLowerCase().includes(q);
+          const matchDef = item.definition.toLowerCase().includes(q);
+          const matchHint = (item.examHint || '').toLowerCase().includes(q);
+          if (!matchTerm && !matchDef && !matchHint) return false;
+        }
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column:1/-1;text-align:center;padding:var(--space-2xl);background:var(--surface-container-low);border:var(--card-border);border-radius:var(--rounded-md);">
+            <i data-lucide="search-x" style="width:36px;height:36px;color:var(--on-surface-variant);margin-bottom:var(--space-xs);"></i>
+            <h3 style="font-family:var(--font-headline);font-size:1.25rem;">沒有符合條件的概念詞</h3>
+            <p style="color:var(--on-surface-variant);font-size:0.875rem;">請嘗試放寬篩選條件或清空搜索關鍵字。</p>
+          </div>
+        `;
+        if (window.lucide) window.lucide.createIcons();
+        return;
+      }
+
+      let html = '';
+      filtered.forEach(item => {
+        const isMastered = masteredIds.has(item.id);
+        const cardClass = isMastered ? 'concept-card mastered' : 'concept-card';
+
+        // Break characters into clickable badges
+        const charsHtml = item.characters.map(ch => `
+          <span class="term-char-interactive" onclick="openCharFromCard('${ch}', event)" title="點擊檢視「${ch}」動態筆順與習字">
+            ${ch}
+          </span>
+        `).join('');
+
+        // Handle Masking / Recall
+        let defClass = 'definition-box';
+        let termDisplayHtml = charsHtml;
+
+        if (currentMaskMode === 'def') {
+          defClass += ' hidden-content';
+        } else if (currentMaskMode === 'term') {
+          termDisplayHtml = `
+            <span class="term-masked-placeholder" onclick="toggleTermReveal(${item.id}, this)" style="cursor:pointer;background:var(--primary-container);color:var(--on-primary-container);padding:0.125rem 0.5rem;border-radius:var(--rounded);font-size:1rem;font-weight:700;">
+              點擊揭開概念詞
+            </span>
+            <span class="term-revealed-slot" style="display:none;">${charsHtml}</span>
+          `;
+        }
+
+        html += `
+          <div class="card-wrapper">
+            <article class="${cardClass}" id="card-item-${item.id}">
+              <div>
+                <div class="card-header">
+                  <div class="card-meta-left">
+                    <span class="index-badge">#${String(item.id).padStart(2, '0')}</span>
+                    <span class="day-badge day-${item.day}">第${item.day}天</span>
+                    <span class="category-chip">${item.category}</span>
+                  </div>
+
+                  <button type="button" class="bookmark-btn ${isMastered ? 'active' : ''}" onclick="toggleMastered(${item.id})">
+                    <i data-lucide="${isMastered ? 'check' : 'circle'}" style="width:13px;height:13px;"></i>
+                    ${isMastered ? '已掌握' : '標記掌握'}
+                  </button>
+                </div>
+
+                <div class="term-headline-row">
+                  <h2 class="term-title" id="term-title-${item.id}">${termDisplayHtml}</h2>
+                  <button type="button" class="tts-inline-btn" onclick="speakCantonese('${item.term}', this)" title="朗讀概念詞">
+                    <i data-lucide="volume-2" style="width:13px;height:13px;"></i> 讀詞
+                  </button>
+                </div>
+
+                <div class="${defClass}" id="def-box-${item.id}" onclick="handleDefBoxClick(${item.id})">
+                  <p>${item.definition}</p>
+                  ${currentMaskMode === 'def' ? `
+                    <div class="reveal-overlay" id="reveal-overlay-${item.id}">
+                      <i data-lucide="eye" style="width:14px;height:14px;margin-right:4px;"></i> 點擊翻開詳細解釋
+                    </div>
+                  ` : ''}
+                </div>
+
+                <div class="def-tts-row">
+                  <button type="button" class="tts-inline-btn" onclick="speakCantonese('${item.definition}', this)" title="朗讀詳細解釋">
+                    <i data-lucide="volume-2" style="width:12px;height:12px;"></i> 朗讀整句解釋
+                  </button>
+                </div>
+              </div>
+
+              <div class="char-chips-bar">
+                <span class="char-chips-label">
+                  <i data-lucide="pen-tool" style="width:11px;height:11px;"></i> 筆順習字：
+                </span>
+                <div class="char-chips-list">
+                  ${item.characters.map(ch => `
+                    <button type="button" class="char-chip" onclick="openCharFromCard('${ch}', event)">
+                      ${ch} <span style="font-size:0.6875rem;opacity:0.75;">筆順</span>
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+            </article>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function toggleMastered(id) {
+      if (masteredIds.has(id)) {
+        masteredIds.delete(id);
+        showToast('已取消掌握標記');
+      } else {
+        masteredIds.add(id);
+        showToast('已標記為精通掌握！');
+      }
+      updateMasteredStats();
+      renderConceptCards();
+      persistState();
+    }
+
+    function updateMasteredStats() {
+      const count = masteredIds.size;
+      const total = CONCEPTS_DATA.length;
+      const pct = Math.round((count / total) * 100);
+
+      const countEl = document.getElementById('stat-mastered-count');
+      const pctEl = document.getElementById('stat-mastered-pct');
+      const barEl = document.getElementById('stat-progress-bar');
+
+      if (countEl) countEl.innerHTML = `${count} <span style="font-size:1rem;font-weight:500;">/ ${total}</span>`;
+      if (pctEl) pctEl.textContent = `掌握率：${pct}% · 點擊卡片星號標記已精通`;
+      if (barEl) barEl.style.width = `${pct}%`;
+    }
+
+    function handleDefBoxClick(id) {
+      if (currentMaskMode === 'def') {
+        const box = document.getElementById(`def-box-${id}`);
+        const overlay = document.getElementById(`reveal-overlay-${id}`);
+        if (box) box.classList.remove('hidden-content');
+        if (overlay) overlay.style.display = 'none';
+      }
+    }
+
+    function toggleTermReveal(id, placeholderEl) {
+      if (placeholderEl && placeholderEl.nextElementSibling) {
+        placeholderEl.style.display = 'none';
+        placeholderEl.nextElementSibling.style.display = 'inline-flex';
+      }
+    }
+
+    function setDayFilter(day, btn) {
+      currentDayFilter = day;
+      document.querySelectorAll('#day-filter-group .filter-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderConceptCards();
+    }
+
+    function setCategoryFilter(cat, btn) {
+      currentCategoryFilter = cat;
+      document.querySelectorAll('#category-filter-group .filter-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderConceptCards();
+    }
+
+    function handleSearchInput(val) {
+      searchQuery = val;
+      renderConceptCards();
+    }
+
+    function toggleFilterMasteredOnly(btn) {
+      filterMasteredOnly = !filterMasteredOnly;
+      if (btn) {
+        btn.classList.toggle('active', filterMasteredOnly);
+      }
+      renderConceptCards();
+    }
+
+    function setMaskMode(mode) {
+      currentMaskMode = mode;
+      document.getElementById('btn-mask-def')?.classList.toggle('active', mode === 'def');
+      document.getElementById('btn-mask-term')?.classList.toggle('active', mode === 'term');
+      document.getElementById('btn-mask-none')?.classList.toggle('active', mode === 'none');
+      renderConceptCards();
+    }
+
+    /* =====================================================================
+       6. TAB SWITCHING
+       ===================================================================== */
+    function switchMainTab(tab) {
+      currentMainTab = tab;
+      
+      const btnExplorer = document.getElementById('tab-btn-explorer');
+      const btnRecall = document.getElementById('tab-btn-recall');
+      const btnExam = document.getElementById('tab-btn-exam');
+      const btnStroke = document.getElementById('tab-btn-stroke');
+
+      btnExplorer?.classList.toggle('active', tab === 'explorer');
+      btnRecall?.classList.toggle('active', tab === 'recall');
+      btnExam?.classList.toggle('active', tab === 'exam');
+      btnStroke?.classList.toggle('active', tab === 'stroke');
+
+      const viewCards = document.getElementById('view-cards-container');
+      const viewExam = document.getElementById('view-exam-container');
+      const viewStroke = document.getElementById('view-stroke-container');
+      const recallTools = document.getElementById('recall-mode-tools');
+
+      if (viewCards) viewCards.style.display = (tab === 'explorer' || tab === 'recall') ? 'block' : 'none';
+      if (viewExam) viewExam.style.display = (tab === 'exam') ? 'block' : 'none';
+      if (viewStroke) viewStroke.style.display = (tab === 'stroke') ? 'block' : 'none';
+
+      if (tab === 'recall') {
+        if (recallTools) recallTools.style.display = 'flex';
+        if (currentMaskMode === 'none') {
+          setMaskMode('def');
+        }
+      } else {
+        if (recallTools) recallTools.style.display = 'none';
+        if (tab === 'explorer' && currentMaskMode !== 'none') {
+          currentMaskMode = 'none';
+          renderConceptCards();
+        }
+      }
+
+      if (tab === 'exam' && examQuestions.length === 0) {
+        startNewExam();
+      }
+
+      if (tab === 'stroke') {
+        initStudioPicker();
+        renderStudioCharacter(currentChar);
+        initPracticeCanvas();
+      }
+    }
+
+    /* =====================================================================
+       7. 5-MINUTE MOCK EXAM SYSTEM (英華書院背默標準)
+       ===================================================================== */
+    function startNewExam() {
+      // Pick 10 unique questions randomly from the 37 concepts
+      const shuffled = [...CONCEPTS_DATA].sort(() => 0.5 - Math.random());
+      examQuestions = shuffled.slice(0, 10);
+
+      examTimeSeconds = 300;
+      clearInterval(examTimerInterval);
+      examTimerInterval = null;
+      examActive = false;
+
+      updateTimerDisplay();
+
+      const timerBtnText = document.getElementById('timer-btn-text');
+      const timerIcon = document.getElementById('timer-icon');
+      if (timerBtnText) timerBtnText.textContent = '開始計時';
+      if (timerIcon) timerIcon.setAttribute('data-lucide', 'play');
+
+      const resultBanner = document.getElementById('exam-result-banner');
+      if (resultBanner) resultBanner.style.display = 'none';
+
+      const qList = document.getElementById('exam-questions-list');
+      if (!qList) return;
+
+      let html = '';
+      examQuestions.forEach((q, idx) => {
+        html += `
+          <div class="exam-q-item" id="exam-q-${idx}">
+            <div class="exam-q-top">
+              <span class="exam-q-index">第 ${idx + 1} 題</span>
+              <span style="font-size:0.75rem;color:var(--on-surface-variant);">${q.category}</span>
+            </div>
+            <div class="exam-q-def">
+              <strong>解釋：</strong>${q.definition}
+            </div>
+            <div class="exam-input-row">
+              <label for="exam-ans-${idx}">概念詞：</label>
+              <input type="text" id="exam-ans-${idx}" class="exam-text-input" placeholder="請在此填寫精確概念詞（每個詞限用一次）" autocomplete="off" oninput="updateAnsweredCount()">
+              <div id="exam-feedback-${idx}" style="font-size:0.875rem;font-weight:600;display:none;"></div>
+            </div>
+          </div>
+        `;
+      });
+      qList.innerHTML = html;
+      updateAnsweredCount();
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function toggleExamTimer() {
+      if (examActive) {
+        // Pause timer
+        clearInterval(examTimerInterval);
+        examTimerInterval = null;
+        examActive = false;
+        document.getElementById('timer-btn-text').textContent = '繼續計時';
+        document.getElementById('timer-icon')?.setAttribute('data-lucide', 'play');
+        showToast('測驗計時已暫停');
+      } else {
+        // Start / Resume timer
+        examActive = true;
+        document.getElementById('timer-btn-text').textContent = '暫停計時';
+        document.getElementById('timer-icon')?.setAttribute('data-lucide', 'pause');
+        examTimerInterval = setInterval(() => {
+          examTimeSeconds--;
+          updateTimerDisplay();
+          if (examTimeSeconds <= 0) {
+            clearInterval(examTimerInterval);
+            examTimerInterval = null;
+            examActive = false;
+            showToast('時間到！自動為閣下結算交卷。');
+            handleExamSubmit();
+          }
+        }, 1000);
+      }
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function updateTimerDisplay() {
+      const display = document.getElementById('exam-timer-display');
+      if (!display) return;
+      const mins = Math.floor(examTimeSeconds / 60);
+      const secs = examTimeSeconds % 60;
+      display.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      if (examTimeSeconds <= 60) {
+        display.style.color = 'var(--error)';
+      } else {
+        display.style.color = 'var(--on-surface)';
+      }
+    }
+
+    function updateAnsweredCount() {
+      let count = 0;
+      examQuestions.forEach((_, idx) => {
+        const inp = document.getElementById(`exam-ans-${idx}`);
+        if (inp && inp.value.trim() !== '') count++;
+      });
+      const el = document.getElementById('exam-answered-count');
+      if (el) el.textContent = count;
+    }
+
+    function resetExamAnswers() {
+      examQuestions.forEach((_, idx) => {
+        const inp = document.getElementById(`exam-ans-${idx}`);
+        if (inp) inp.value = '';
+      });
+      updateAnsweredCount();
+      showToast('已清空所有題目作答');
+    }
+
+    function handleExamSubmit(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      clearInterval(examTimerInterval);
+      examTimerInterval = null;
+      examActive = false;
+
+      let score = 0;
+      const enteredAnswers = [];
+      const duplicateCount = {};
+
+      // First pass: collect answers and detect duplicates
+      examQuestions.forEach((_, idx) => {
+        const inp = document.getElementById(`exam-ans-${idx}`);
+        const val = inp ? inp.value.trim() : '';
+        enteredAnswers.push(val);
+        if (val) {
+          duplicateCount[val] = (duplicateCount[val] || 0) + 1;
+        }
+      });
+
+      // Grade strictly according to instructions
+      examQuestions.forEach((q, idx) => {
+        const userAns = enteredAnswers[idx];
+        const feedbackEl = document.getElementById(`exam-feedback-${idx}`);
+        const inputEl = document.getElementById(`exam-ans-${idx}`);
+
+        // Standard accepted terms from PDF
+        const isMatch = q.altTerms.some(t => t.trim() === userAns);
+        const isDuplicate = duplicateCount[userAns] > 1;
+
+        if (feedbackEl && inputEl) {
+          feedbackEl.style.display = 'block';
+          if (isMatch && !isDuplicate) {
+            score++;
+            inputEl.style.borderColor = 'var(--positive)';
+            inputEl.style.background = 'var(--positive-container)';
+            feedbackEl.innerHTML = `<span style="color:var(--positive);">✓ 正確 (+1分)</span>`;
+          } else if (isDuplicate) {
+            inputEl.style.borderColor = 'var(--error)';
+            inputEl.style.background = 'var(--error-container)';
+            feedbackEl.innerHTML = `<span style="color:var(--error);">✗ 重複使用概念詞 (0分)！標準答案：${q.term}</span>`;
+          } else {
+            inputEl.style.borderColor = 'var(--error)';
+            inputEl.style.background = 'var(--error-container)';
+            feedbackEl.innerHTML = `<span style="color:var(--error);">✗ 錯別字/未作答 (0分)！標準答案：<strong>${q.term}</strong></span>`;
+          }
+        }
+      });
+
+      // Display banner summary
+      const banner = document.getElementById('exam-result-banner');
+      const scoreDisplay = document.getElementById('exam-score-display');
+      const gradeDisplay = document.getElementById('exam-grade-display');
+      const feedbackText = document.getElementById('exam-feedback-text');
+
+      if (banner && scoreDisplay && gradeDisplay && feedbackText) {
+        banner.style.display = 'block';
+        scoreDisplay.textContent = `${score} / 10 分`;
+
+        if (score >= 9) {
+          gradeDisplay.innerHTML = `<span style="color:var(--positive);">表現卓越（優異等級）</span>`;
+          feedbackText.textContent = `太棒了！閣下對單元1.2的概念詞掌握得極其精確，完全符合校內背默高分要求！`;
+        } else if (score >= 6) {
+          gradeDisplay.innerHTML = `<span style="color:var(--secondary);">及格達標（良好等級）</span>`;
+          feedbackText.textContent = `恭喜及格！部分錯字或混淆詞彙可透過「漢字筆順」與「遮蔽背默」進一步強化練習。`;
+        } else {
+          gradeDisplay.innerHTML = `<span style="color:var(--error);">有待加強（未達標）</span>`;
+          feedbackText.textContent = `請勿灰心！請按錯題對照標準詞彙，點擊下方按鈕將錯題加入重點溫習，再接再厲！`;
+        }
+        banner.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function reviewExamMistakes() {
+      let added = 0;
+      examQuestions.forEach((q, idx) => {
+        const inp = document.getElementById(`exam-ans-${idx}`);
+        const userAns = inp ? inp.value.trim() : '';
+        const isMatch = q.altTerms.some(t => t.trim() === userAns);
+        if (!isMatch) {
+          needsReviewIds.add(q.id);
+          masteredIds.delete(q.id);
+          added++;
+        }
+      });
+      updateMasteredStats();
+      persistState();
+      showToast(`已將 ${added} 道錯題加入重點溫習標記！`);
+    }
+
+    /* =====================================================================
+       8. STROKE ORDER STUDIO & KAI-SHU ANIMATOR
+       ===================================================================== */
+    function initStudioPicker() {
+      const picker = document.getElementById('stroke-studio-picker');
+      if (!picker) return;
+
+      const priorityChars = ["家", "庭", "融", "權", "協", "羣", "尊", "親", "突", "制", "漠", "競", "溝", "凝", "誼", "裔", "弱"];
+      let html = '';
+      priorityChars.forEach(ch => {
+        html += `
+          <button type="button" class="picker-char-btn ${ch === currentChar ? 'active' : ''}" onclick="selectStudioChar('${ch}', this)">
+            ${ch}
+          </button>
+        `;
+      });
+      picker.innerHTML = html;
+    }
+
+    function selectStudioChar(ch, btn) {
+      currentChar = ch;
+      document.querySelectorAll('#stroke-studio-picker .picker-char-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderStudioCharacter(ch);
+      setGhostChar(ch);
+    }
+
+    function renderStudioCharacter(ch) {
+      currentChar = ch;
+      const meta = getCharacterMeta(ch);
+
+      document.getElementById('studio-char-display').textContent = ch;
+      document.getElementById('studio-jyutping-display').textContent = meta.jyutping;
+      document.getElementById('studio-strokes-count').textContent = `總筆畫：${meta.strokes} 劃`;
+      document.getElementById('studio-radical').textContent = `部首：${meta.radical}`;
+      document.getElementById('studio-structure').textContent = `結構：${meta.structure}`;
+
+      currentStrokeIdx = 0;
+      stopStrokeAnimation();
+      drawAnimatedSVGStrokes(meta, currentStrokeIdx);
+      renderBreakdownChips(meta);
+      updateStepCounter(meta, currentStrokeIdx);
+    }
+
+    function drawAnimatedSVGStrokes(meta, strokeLimit) {
+      const svg = document.getElementById('studio-char-svg');
+      if (!svg) return;
+
+      let html = '';
+      meta.strokePaths.forEach((d, idx) => {
+        if (idx <= strokeLimit) {
+          const isLatest = (idx === strokeLimit);
+          const strokeColor = isLatest ? 'var(--brush-vermilion)' : 'var(--brush-ink)';
+          const strokeWidth = isLatest ? '9' : '8';
+
+          html += `
+            <path d="${d}" fill="none" stroke="${strokeColor}" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- Stroke Order Number Tag -->
+            <circle cx="${d.split(' ')[1].split(',')[0]}" cy="${d.split(' ')[1].split(',')[1]}" r="8" fill="var(--primary-container)" stroke="var(--outline)" stroke-width="1"/>
+            <text x="${d.split(' ')[1].split(',')[0]}" y="${parseFloat(d.split(' ')[1].split(',')[1]) + 3}" font-family="var(--font-label)" font-size="10" font-weight="700" fill="var(--on-primary-container)" text-anchor="middle">${idx + 1}</text>
+          `;
+        }
+      });
+      svg.innerHTML = html;
+    }
+
+    function renderBreakdownChips(meta) {
+      const container = document.getElementById('studio-breakdown-chips');
+      if (!container) return;
+
+      let html = '';
+      meta.strokeNames.forEach((name, idx) => {
+        html += `
+          <div class="breakdown-step-card ${idx === currentStrokeIdx ? 'active' : ''}" onclick="jumpToStroke(${idx})">
+            <div class="breakdown-char-mini">${currentChar}</div>
+            <div class="breakdown-stroke-name">${idx + 1}.${name}</div>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function updateStepCounter(meta, idx) {
+      const counter = document.getElementById('studio-step-counter');
+      if (!counter) return;
+      const strokeName = meta.strokeNames[idx] || '筆劃';
+      counter.innerHTML = `筆劃順序：第 <strong>${idx + 1}</strong> / ${meta.strokes} 劃 · <strong>${strokeName}</strong>`;
+    }
+
+    function toggleStrokeAnimation() {
+      if (isPlayingStroke) {
+        stopStrokeAnimation();
+      } else {
+        startStrokeAnimation();
+      }
+    }
+
+    function startStrokeAnimation() {
+      isPlayingStroke = true;
+      document.getElementById('studio-play-text').textContent = '暫停';
+      document.getElementById('studio-play-icon')?.setAttribute('data-lucide', 'pause');
+      if (window.lucide) window.lucide.createIcons();
+
+      const meta = getCharacterMeta(currentChar);
+      const intervalMs = Math.round(1000 / currentStrokeSpeed);
+
+      strokeTimer = setInterval(() => {
+        currentStrokeIdx++;
+        if (currentStrokeIdx >= meta.strokePaths.length) {
+          currentStrokeIdx = meta.strokePaths.length - 1;
+          stopStrokeAnimation();
+        }
+        drawAnimatedSVGStrokes(meta, currentStrokeIdx);
+        updateStepCounter(meta, currentStrokeIdx);
+        renderBreakdownChips(meta);
+      }, intervalMs);
+    }
+
+    function stopStrokeAnimation() {
+      isPlayingStroke = false;
+      clearInterval(strokeTimer);
+      strokeTimer = null;
+      const textEl = document.getElementById('studio-play-text');
+      const iconEl = document.getElementById('studio-play-icon');
+      if (textEl) textEl.textContent = '播放筆順';
+      if (iconEl) iconEl.setAttribute('data-lucide', 'play');
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function replayStrokeAnimation() {
+      stopStrokeAnimation();
+      currentStrokeIdx = 0;
+      const meta = getCharacterMeta(currentChar);
+      drawAnimatedSVGStrokes(meta, currentStrokeIdx);
+      updateStepCounter(meta, currentStrokeIdx);
+      renderBreakdownChips(meta);
+      startStrokeAnimation();
+    }
+
+    function stepForwardStroke() {
+      stopStrokeAnimation();
+      const meta = getCharacterMeta(currentChar);
+      if (currentStrokeIdx < meta.strokePaths.length - 1) {
+        currentStrokeIdx++;
+        drawAnimatedSVGStrokes(meta, currentStrokeIdx);
+        updateStepCounter(meta, currentStrokeIdx);
+        renderBreakdownChips(meta);
+      }
+    }
+
+    function stepBackwardStroke() {
+      stopStrokeAnimation();
+      const meta = getCharacterMeta(currentChar);
+      if (currentStrokeIdx > 0) {
+        currentStrokeIdx--;
+        drawAnimatedSVGStrokes(meta, currentStrokeIdx);
+        updateStepCounter(meta, currentStrokeIdx);
+        renderBreakdownChips(meta);
+      }
+    }
+
+    function jumpToStroke(idx) {
+      stopStrokeAnimation();
+      const meta = getCharacterMeta(currentChar);
+      currentStrokeIdx = idx;
+      drawAnimatedSVGStrokes(meta, currentStrokeIdx);
+      updateStepCounter(meta, currentStrokeIdx);
+      renderBreakdownChips(meta);
+    }
+
+    function updateStrokeSpeed(val) {
+      currentStrokeSpeed = parseFloat(val) || 1.0;
+      const label = document.getElementById('stroke-speed-label');
+      if (label) label.textContent = `${currentStrokeSpeed.toFixed(2)}x`;
+      if (isPlayingStroke) {
+        stopStrokeAnimation();
+        startStrokeAnimation();
+      }
+      persistState();
+    }
+
+    function speakCurrentStudioChar() {
+      speakCantonese(currentChar);
+    }
+
+    function openCharFromCard(ch, event) {
+      if (event && event.stopPropagation) event.stopPropagation();
+      switchMainTab('stroke');
+      selectStudioChar(ch);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* =====================================================================
+       9. PRACTICE CANVAS (習字練寫板)
+       ===================================================================== */
+    function initPracticeCanvas() {
+      const canvas = document.getElementById('practice-canvas');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let lastX = 0;
+      let lastY = 0;
+
+      function startDraw(e) {
+        isDrawing = true;
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+        lastX = clientX - rect.left;
+        lastY = clientY - rect.top;
+      }
+
+      function draw(e) {
+        if (!isDrawing) return;
+        const rect = canvas.getBoundingClientRect();
+        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+        const currentX = clientX - rect.left;
+        const currentY = clientY - rect.top;
+
+        ctx.strokeStyle = currentBrushColor === 'red' ? '#b42318' : '#17181a';
+        ctx.lineWidth = currentBrushWidth;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(currentX, currentY);
+        ctx.stroke();
+
+        lastX = currentX;
+        lastY = currentY;
+      }
+
+      function stopDraw() {
+        if (isDrawing) {
+          isDrawing = false;
+          saveCanvasSnapshot();
+        }
+      }
+
+      canvas.addEventListener('pointerdown', startDraw);
+      canvas.addEventListener('pointermove', draw);
+      canvas.addEventListener('pointerup', stopDraw);
+      canvas.addEventListener('pointercancel', stopDraw);
+      canvas.addEventListener('pointerleave', stopDraw);
+
+      setGhostChar(currentChar);
+    }
+
+    function saveCanvasSnapshot() {
+      const canvas = document.getElementById('practice-canvas');
+      if (!canvas) return;
+      canvasHistory.push(canvas.toDataURL());
+      if (canvasHistory.length > 20) canvasHistory.shift();
+    }
+
+    function clearPracticeCanvas() {
+      const canvas = document.getElementById('practice-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvasHistory = [];
+      showToast('已清空練字板');
+    }
+
+    function undoCanvasStroke() {
+      const canvas = document.getElementById('practice-canvas');
+      if (!canvas || canvasHistory.length === 0) return;
+      canvasHistory.pop(); // pop current
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (canvasHistory.length > 0) {
+        const prevImg = new Image();
+        prevImg.src = canvasHistory[canvasHistory.length - 1];
+        prevImg.onload = () => ctx.drawImage(prevImg, 0, 0);
+      }
+    }
+
+    function setBrushColor(color) {
+      currentBrushColor = color;
+      document.getElementById('btn-ink-black')?.classList.toggle('active', color === 'black');
+      document.getElementById('btn-ink-red')?.classList.toggle('active', color === 'red');
+    }
+
+    function setBrushWidth(w) {
+      currentBrushWidth = parseInt(w, 10) || 8;
+    }
+
+    function toggleGhostGuide() {
+      showGhostGuide = !showGhostGuide;
+      const el = document.getElementById('canvas-ghost-char');
+      const btn = document.getElementById('btn-toggle-ghost');
+      if (el) el.style.display = showGhostGuide ? 'flex' : 'none';
+      if (btn) btn.classList.toggle('active', showGhostGuide);
+    }
+
+    function setGhostChar(ch) {
+      const ghost = document.getElementById('canvas-ghost-char');
+      if (ghost) ghost.textContent = ch;
+    }
+
+    function closeCharModal() {
+      const modal = document.getElementById('char-modal-backdrop');
+      if (modal) modal.classList.remove('open');
+    }
+
+    /* Toast Notification Utility */
+    function showToast(msg) {
+      const toast = document.getElementById('app-toast');
+      const text = document.getElementById('toast-message');
+      if (!toast || !text) return;
+
+      text.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    /* Initialize upon DOM load */
+    window.addEventListener('DOMContentLoaded', () => {
+      loadSavedState();
+      renderConceptCards();
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
